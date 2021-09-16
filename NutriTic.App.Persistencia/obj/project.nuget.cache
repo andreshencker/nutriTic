@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "X00dBaqqNeTkkQIq7fS8w68aEr/o/FMMpqlVLJEd4JHw1ntu17W+22RF0vQZFQctL3etlJQJQkJkP4o/Qvk8IQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Andres\\Desktop\\nutricion\\NutriTic.App\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andres\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Andres\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
