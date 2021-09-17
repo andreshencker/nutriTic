@@ -1,7 +1,21 @@
-namespace NutriTic.App.Persistencia.AppRepositorios
+using Microsoft.EntityFrameworkCore;
+using NutriTic.App.Dominio.Entidades;
+namespace NutriTic.App.Persistencia
 {
-    public class AppContext
+    public class AppContext:DbContext
     {
-        
+       public DbSet<Persona> Persona{get;set;}
+       public DbSet<CargoEmpleado> CargoEmpleado{get;set;}
+       public DbSet<Empleado> Empleado{get;set;}
+       public DbSet<Medida> Medida{get;set;}
+       public DbSet<Paciente> Paciente{get;set;}
+       public DbSet<PacienteEmpleado> PacienteEmpleado{get;set;}
+       public DbSet<Valoracion> Valoracion{get;set;}
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+            if(!optionsBuilder.IsConfigured){
+                optionsBuilder.UseSqlServer("Data source=(localdb)MSSQLlocalDB;Initial Catalog=NutriTicData");
+            }
+        }
     }
 }

@@ -2068,6 +2068,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "NutriTic.App.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/NutriTic.App.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NutriTic.App.Dominio.dll": {}
+        }
       }
     }
   },
@@ -7236,6 +7246,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "NutriTic.App.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../NutriTic.App.Dominio/NutriTic.App.Dominio.csproj",
+      "msbuildProject": "../NutriTic.App.Dominio/NutriTic.App.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7243,7 +7258,8 @@
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
+      "NutriTic.App.Dominio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7252,24 +7268,31 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andres\\Desktop\\nutricion\\NutriTic.App\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
+      "projectUniqueName": "I:\\nutricion\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
       "projectName": "NutriTic.App.Persistencia",
-      "projectPath": "C:\\Users\\Andres\\Desktop\\nutricion\\NutriTic.App\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
+      "projectPath": "I:\\nutricion\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
       "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andres\\Desktop\\nutricion\\NutriTic.App\\NutriTic.App.Persistencia\\obj\\",
+      "outputPath": "I:\\nutricion\\nutriTic\\NutriTic.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Andres\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Andres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "I:\\nutricion\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
+              "projectPath": "I:\\nutricion\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -7280,6 +7303,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7317,7 +7341,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

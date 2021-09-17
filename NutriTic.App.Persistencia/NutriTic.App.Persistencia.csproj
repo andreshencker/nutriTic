@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+    <ItemGroup>
+    <ProjectReference Include="..\NutriTic.App.Dominio\NutriTic.App.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
