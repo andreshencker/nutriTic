@@ -14,7 +14,7 @@ namespace NutriTic.App.Persistencia
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if(!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("Data source=(localdb)MSSQLlocalDB;Initial Catalog=NutriTicData");
+                optionsBuilder.UseSqlServer("Data source=(localdb)\MSSQLLocalDB;Initial Catalog=NutriTicData");
             }
         }
     }
