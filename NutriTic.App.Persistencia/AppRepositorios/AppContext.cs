@@ -4,7 +4,9 @@ namespace NutriTic.App.Persistencia
 {
     public class AppContext:DbContext
     {
+
       // public DbSet<Persona> Persona{get;set;}
+
        public DbSet<CargoEmpleado> CargoEmpleado{get;set;}
        public DbSet<Empleado> Empleado{get;set;}
        public DbSet<Medida> Medida{get;set;}
