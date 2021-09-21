@@ -21,8 +21,10 @@ namespace NutriTic.App.Persistencia.Migrations
 
             modelBuilder.Entity("NutriTic.App.Dominio.Entidades.CargoEmpleado", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("NonbreCargo")
                         .HasColumnType("nvarchar(max)");
@@ -30,6 +32,39 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CargoEmpleado");
+                });
+
+            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Empleado", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("CargoEmpleadoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerApellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerNonbre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoApellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoNombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CargoEmpleadoId");
+
+                    b.ToTable("Empleado");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Medida", b =>
@@ -55,6 +90,46 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("Medida");
                 });
 
+            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Paciente", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Estatura")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FechaNacimiento")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Latitud")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longitud")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerApellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerNonbre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoApellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoNombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Paciente");
+                });
+
             modelBuilder.Entity("NutriTic.App.Dominio.Entidades.PacienteEmpleado", b =>
                 {
                     b.Property<int>("Id")
@@ -75,40 +150,6 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.HasIndex("PacienteId");
 
                     b.ToTable("PacienteEmpleado");
-                });
-
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Persona", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Correo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrimerApellido")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrimerNonbre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SegundoApellido")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SegundoNombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Persona");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Persona");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Valoracion", b =>
@@ -138,33 +179,11 @@ namespace NutriTic.App.Persistencia.Migrations
 
             modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Empleado", b =>
                 {
-                    b.HasBaseType("NutriTic.App.Dominio.Entidades.Persona");
+                    b.HasOne("NutriTic.App.Dominio.Entidades.CargoEmpleado", "CargoEmpleado")
+                        .WithMany()
+                        .HasForeignKey("CargoEmpleadoId");
 
-                    b.Property<string>("CargoEmpleadoId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasIndex("CargoEmpleadoId");
-
-                    b.HasDiscriminator().HasValue("Empleado");
-                });
-
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Paciente", b =>
-                {
-                    b.HasBaseType("NutriTic.App.Dominio.Entidades.Persona");
-
-                    b.Property<int>("Estatura")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FechaNacimiento")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Latitud")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Longitud")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Paciente");
+                    b.Navigation("CargoEmpleado");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Medida", b =>
@@ -204,15 +223,6 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.Navigation("Empleado");
 
                     b.Navigation("Medida");
-                });
-
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Empleado", b =>
-                {
-                    b.HasOne("NutriTic.App.Dominio.Entidades.CargoEmpleado", "CargoEmpleado")
-                        .WithMany()
-                        .HasForeignKey("CargoEmpleadoId");
-
-                    b.Navigation("CargoEmpleado");
                 });
 #pragma warning restore 612, 618
         }

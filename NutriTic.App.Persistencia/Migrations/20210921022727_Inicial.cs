@@ -10,7 +10,8 @@ namespace NutriTic.App.Persistencia.Migrations
                 name: "CargoEmpleado",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     NonbreCargo = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -19,7 +20,7 @@ namespace NutriTic.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Persona",
+                name: "Paciente",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -29,18 +30,34 @@ namespace NutriTic.App.Persistencia.Migrations
                     SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CargoEmpleadoId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     FechaNacimiento = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Estatura = table.Column<int>(type: "int", nullable: true),
+                    Estatura = table.Column<int>(type: "int", nullable: false),
                     Latitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Longitud = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Persona", x => x.Id);
+                    table.PrimaryKey("PK_Paciente", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Empleado",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PrimerNonbre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CargoEmpleadoId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Empleado", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Persona_CargoEmpleado_CargoEmpleadoId",
+                        name: "FK_Empleado_CargoEmpleado_CargoEmpleadoId",
                         column: x => x.CargoEmpleadoId,
                         principalTable: "CargoEmpleado",
                         principalColumn: "Id",
@@ -61,9 +78,9 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_Medida", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Medida_Persona_PacienteId",
+                        name: "FK_Medida_Paciente_PacienteId",
                         column: x => x.PacienteId,
-                        principalTable: "Persona",
+                        principalTable: "Paciente",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -81,15 +98,15 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_PacienteEmpleado", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PacienteEmpleado_Persona_EmpleadoId",
+                        name: "FK_PacienteEmpleado_Empleado_EmpleadoId",
                         column: x => x.EmpleadoId,
-                        principalTable: "Persona",
+                        principalTable: "Empleado",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PacienteEmpleado_Persona_PacienteId",
+                        name: "FK_PacienteEmpleado_Paciente_PacienteId",
                         column: x => x.PacienteId,
-                        principalTable: "Persona",
+                        principalTable: "Paciente",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -108,18 +125,23 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_Valoracion", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_Valoracion_Empleado_EmpleadoId",
+                        column: x => x.EmpleadoId,
+                        principalTable: "Empleado",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_Valoracion_Medida_MedidaId",
                         column: x => x.MedidaId,
                         principalTable: "Medida",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Valoracion_Persona_EmpleadoId",
-                        column: x => x.EmpleadoId,
-                        principalTable: "Persona",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Empleado_CargoEmpleadoId",
+                table: "Empleado",
+                column: "CargoEmpleadoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Medida_PacienteId",
@@ -135,11 +157,6 @@ namespace NutriTic.App.Persistencia.Migrations
                 name: "IX_PacienteEmpleado_PacienteId",
                 table: "PacienteEmpleado",
                 column: "PacienteId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Persona_CargoEmpleadoId",
-                table: "Persona",
-                column: "CargoEmpleadoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Valoracion_EmpleadoId",
@@ -161,13 +178,16 @@ namespace NutriTic.App.Persistencia.Migrations
                 name: "Valoracion");
 
             migrationBuilder.DropTable(
+                name: "Empleado");
+
+            migrationBuilder.DropTable(
                 name: "Medida");
 
             migrationBuilder.DropTable(
-                name: "Persona");
+                name: "CargoEmpleado");
 
             migrationBuilder.DropTable(
-                name: "CargoEmpleado");
+                name: "Paciente");
         }
     }
 }
