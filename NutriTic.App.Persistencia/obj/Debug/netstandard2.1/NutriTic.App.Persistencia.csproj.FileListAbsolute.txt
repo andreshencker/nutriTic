@@ -23,3 +23,15 @@ C:\Users\Intel I3\OneDrive\Documentos\nutriTic\NutriTic.App.Persistencia\obj\Deb
 C:\Users\Intel I3\OneDrive\Documentos\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfo.cs
 C:\Users\Intel I3\OneDrive\Documentos\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\Intel I3\OneDrive\Documentos\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CopyComplete
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.deps.json
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.dll
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.pdb
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Dominio.dll
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Dominio.pdb
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csprojAssemblyReference.cache
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfo.cs
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CopyComplete
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.dll
+C:\Users\Intel I3\OneDrive\Documentos\nutriTic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.pdb
