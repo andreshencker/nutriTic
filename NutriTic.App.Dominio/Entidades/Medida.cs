@@ -1,3 +1,4 @@
+using System;
 namespace NutriTic.App.Dominio.Entidades
 {
     public class Medida
