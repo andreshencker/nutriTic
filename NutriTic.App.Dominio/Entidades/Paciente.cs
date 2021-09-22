@@ -9,7 +9,7 @@ namespace NutriTic.App.Dominio.Entidades
         public string Latitud{get;set;}
         public string Longitud{get;set;}
         public string Id {get;set;}
-        public string PrimerNonbre {get;set;}
+        public string PrimerNombre {get;set;}
         public string SegundoNombre {get;set;}
         public string PrimerApellido {get;set;}
         public string SegundoApellido {get;set;}
