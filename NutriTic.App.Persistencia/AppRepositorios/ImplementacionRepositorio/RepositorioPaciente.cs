@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using NutriTic.App.Dominio;
 using NutriTic.App.Dominio.Entidades;
+using NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio;
 
 namespace NutriTic.App.Persistencia.AppRepositorios
 
