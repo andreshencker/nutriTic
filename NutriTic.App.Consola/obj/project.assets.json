@@ -5796,19 +5796,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Intel I3\\.nuget\\packages\\": {}
+    "C:\\Users\\jairo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\nutriTic\\nutriTic\\NutriTic.App.Consola\\NutriTic.App.Consola.csproj",
+      "projectUniqueName": "C:\\Nutricion\\NutriTic\\NutriTic.App.Consola\\NutriTic.App.Consola.csproj",
       "projectName": "NutriTic.App.Consola",
-      "projectPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\nutriTic\\nutriTic\\NutriTic.App.Consola\\NutriTic.App.Consola.csproj",
-      "packagesPath": "C:\\Users\\Intel I3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\nutriTic\\nutriTic\\NutriTic.App.Consola\\obj\\",
+      "projectPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Consola\\NutriTic.App.Consola.csproj",
+      "packagesPath": "C:\\Users\\jairo\\.nuget\\packages\\",
+      "outputPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Intel I3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jairo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5819,8 +5819,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Intel I3\\OneDrive\\Documentos\\nutriTic\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\nutriTic\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj"
+            "C:\\Nutricion\\NutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj": {
+              "projectPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj"
             }
           }
         }
@@ -5856,7 +5856,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
       }
     }
   }

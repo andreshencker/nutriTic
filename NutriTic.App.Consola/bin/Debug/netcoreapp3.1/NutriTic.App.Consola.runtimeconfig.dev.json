@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Intel I3\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Intel I3\\.nuget\\packages"
+      "C:\\Users\\jairo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jairo\\.nuget\\packages"
     ]
   }
 }

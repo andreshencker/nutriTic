@@ -17,3 +17,12 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTi
 I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.csproj.CoreCompileInputs.cache
 I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.dll
 I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.pdb
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\bin\Debug\netstandard2.0\NutriTic.App.Dominio.deps.json
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\bin\Debug\netstandard2.0\NutriTic.App.Dominio.dll
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\bin\Debug\netstandard2.0\NutriTic.App.Dominio.pdb
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.csprojAssemblyReference.cache
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.AssemblyInfoInputs.cache
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.AssemblyInfo.cs
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.dll
+C:\Nutricion\NutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.pdb

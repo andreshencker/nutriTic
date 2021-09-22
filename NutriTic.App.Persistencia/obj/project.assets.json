@@ -7263,34 +7263,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andres\\.nuget\\packages\\": {}
+    "C:\\Users\\jairo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Nutricion\\NutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
       "projectName": "NutriTic.App.Persistencia",
-      "projectPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-      "outputPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Persistencia\\obj\\",
+      "projectPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\jairo\\.nuget\\packages\\",
+      "outputPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Andres\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\jairo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
-              "projectPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj"
+            "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
+              "projectPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj"
             }
           }
         }
@@ -7303,7 +7300,6 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7341,7 +7337,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
       }
     }
   }

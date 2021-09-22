@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/sn+zmSPdIQwop1UBDObv8kGY4rjlyDFwRP/PTqUMX9XB6dfwoRJz0rQ46nyk8dyfwr/BEZY2ClGouM2OgOLXQ==",
+  "dgSpecHash": "+esdLNN6whX6McMpjZT62WqZDAfJi3HcI5BEz0v47DdPGcu3TAsaVEW0kgNOA7X2ri6Hqmz/LaPYbRZKUKozgw==",
   "success": true,
-  "projectFilePath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj",
+  "projectFilePath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Andres\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Andres\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\jairo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jairo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
