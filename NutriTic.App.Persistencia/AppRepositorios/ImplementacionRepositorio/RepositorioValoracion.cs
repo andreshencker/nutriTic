@@ -7,7 +7,7 @@ using NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio;
 
 namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 {
-    public class RepositorioValoracion
+    public class RepositorioValoracion:IRepositorioValoracion
     {
         private readonly AppContext _appContext;
         public RepositorioValoracion(AppContext appContext)

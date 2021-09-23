@@ -6,7 +6,7 @@ using NutriTic.App.Dominio.Entidades;
 using NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio;
 namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 {
-    public class RepositorioPacienteEmpleado
+    public class RepositorioPacienteEmpleado:IRepositorioPacienteEmpleado
     {
          private readonly AppContext _appContext;
         public RepositorioPacienteEmpleado(AppContext appContext)
