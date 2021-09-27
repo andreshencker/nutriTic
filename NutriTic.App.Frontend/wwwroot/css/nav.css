@@ -1,0 +1,10 @@
+.nav-left-section img{
+    width: auto;
+    height: 20px;
+    margin-right: 1;
+}
+
+.nav-left-section a{
+  color:white;
+  text-decoration: none;
+}
