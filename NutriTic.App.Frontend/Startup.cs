@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio;
+using NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio;
+using NutriTic.App.Persistencia.AppRepositorios;
 
 namespace NutriTic.App.Frontend
 {
@@ -24,10 +27,9 @@ namespace NutriTic.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            //services.AddSingleton<IRepositorioPaciente,RepositorioPaciente>();
-
-
-            
+            services.AddSingleton<IRepositorioPaciente,RepositorioPaciente>();
+                
+                        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

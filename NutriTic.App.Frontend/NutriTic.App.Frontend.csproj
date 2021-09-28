@@ -1,5 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <ItemGroup>
+    <ProjectReference Include="..\NutriTic.App.Persistencia\NutriTic.App.Persistencia.csproj" />
+    <ProjectReference Include="..\NutriTic.App.Dominio\NutriTic.App.Dominio.csproj" />
+  </ItemGroup>
+
+  
+
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>

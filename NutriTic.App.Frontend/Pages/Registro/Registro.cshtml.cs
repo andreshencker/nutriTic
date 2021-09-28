@@ -5,19 +5,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using NutriTic.App.Persistencia.AppRepositorios;
+using NutriTic.App.Dominio.Entidades;
+
+ 
+
 
 namespace NutriTic.App.Frontend.Pages
 {
     public class RegistroModel : PageModel
     {
-        private readonly ILogger<RegistroModel> _logger;
+        private readonly IRepositorioPaciente repositorioPaciente;
 
-        public RegistroModel(ILogger<RegistroModel> logger)
-        {
-            _logger = logger;
+        public IEnumerable<Paciente> Pacientes {get;set;}
+
+        public RegistroModel(IRepositorioPaciente repositorioPaciente){
+            this.repositorioPaciente=repositorioPaciente;
         }
+        
+        
         public void OnGet()
         {
+            
         }
     }
 }
