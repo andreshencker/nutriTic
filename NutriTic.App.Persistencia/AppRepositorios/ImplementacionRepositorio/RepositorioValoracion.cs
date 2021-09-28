@@ -21,7 +21,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
             return valoracionAdicionado.Entity;
         }
 
-        void IRepositorioValoracion.DeleteValoracion(string idValoracion)
+        void IRepositorioValoracion.DeleteValoracion(int idValoracion)
         {
             var valoracionEncontrado=_appContext.Valoracion.FirstOrDefault(p => p.Id==idValoracion);
             if(valoracionEncontrado==null)
@@ -35,7 +35,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
             return _appContext.Valoracion;
         }
 
-        Valoracion IRepositorioValoracion.GetOneValoracion(string idValoracion)
+        Valoracion IRepositorioValoracion.GetOneValoracion(int idValoracion)
         {
             return _appContext.Valoracion.FirstOrDefault(p => p.Id == idValoracion);
 

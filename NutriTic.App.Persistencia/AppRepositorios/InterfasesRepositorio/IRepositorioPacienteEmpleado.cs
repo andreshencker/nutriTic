@@ -3,12 +3,12 @@ using NutriTic.App.Dominio.Entidades;
 
 namespace NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio
 {
-    public class IRepositorioPacienteEmpleado
+    public interface IRepositorioPacienteEmpleado
     {
         IEnumerable<PacienteEmpleado> GetAllPacienteEmpleados();
-        PacienteEmpleado GetOnePacienteEmpleado(string idPacienteEmpleado );
+        PacienteEmpleado GetOnePacienteEmpleado(int idPacienteEmpleado );
         PacienteEmpleado CreatePacienteEmpleado(PacienteEmpleado Pacienteempleado );
         //PacienteEmpleado UpdatePacienteEmpleado(string idPacienteEmpleado,PacienteEmpleado Pacienteempleado );
-        void DeletePacienteEmpleado(string idPacienteEmpleado);
+        void DeletePacienteEmpleado(int idPacienteEmpleado);
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {}
+    "C:\\Nutricion\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
+    "C:\\Nutricion\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Nutricion\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj",
         "projectName": "NutriTic.App.Dominio",
-        "projectPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj",
+        "projectPath": "C:\\Nutricion\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\jairo\\.nuget\\packages\\",
-        "outputPath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Dominio\\obj\\",
+        "outputPath": "C:\\Nutricion\\nutriTic\\NutriTic.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jairo\\AppData\\Roaming\\NuGet\\NuGet.Config"

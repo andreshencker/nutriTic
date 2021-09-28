@@ -35,10 +35,10 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 
         void IRepositorioCargoEmpleado.DeleteCargoEmpleado(int idCargoEmpleado)
         {
-            var cargoempleadoEncontrado=_appContext.cargoempleado.FirstOrDefault(p => p.Id==idCargoEmpleado);
+            var cargoempleadoEncontrado=_appContext.CargoEmpleado.FirstOrDefault(p => p.Id==idCargoEmpleado);
             if(cargoempleadoEncontrado==null)
             return;
-            _appContext.cargoempleado.Remove(cargoempleadoEncontrado);
+            _appContext.CargoEmpleado.Remove(cargoempleadoEncontrado);
             _appContext.SaveChanges(); 
         }
     }

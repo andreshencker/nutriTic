@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zrK0niBXzZwrJjScP87DDv9SAk5/fttQXvhht83mXdE8jDyGV2rzZCio9uqofx7lUFDamf9JaGv0eJienQ+deQ==",
+  "dgSpecHash": "0o+BwilmKxHUxxkmeVhBtxOZTVcw+omcvlq/zcCqh1jCmOqxsvx31SI5F66KgEOS2tsAEqEyUnxI9slBwpYakA==",
   "success": true,
-  "projectFilePath": "C:\\Nutricion\\NutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
+  "projectFilePath": "C:\\Nutricion\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jairo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jairo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

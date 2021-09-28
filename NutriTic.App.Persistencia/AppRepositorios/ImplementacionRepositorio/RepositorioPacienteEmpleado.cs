@@ -34,10 +34,10 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 
         void IRepositorioPacienteEmpleado.DeletePacienteEmpleado(int idPacienteEmpleado)
         {
-            var pacienteempleadoEncontrado=_appContext.pacienteempleado.FirstOrDefault(p => p.Id==idPacienteEmpleado);
+            var pacienteempleadoEncontrado=_appContext.PacienteEmpleado.FirstOrDefault(p => p.Id==idPacienteEmpleado);
             if(pacienteempleadoEncontrado==null)
             return;
-            _appContext.pacienteempleado.Remove(pacienteempleadoEncontrado);
+            _appContext.PacienteEmpleado.Remove(pacienteempleadoEncontrado);
             _appContext.SaveChanges(); 
         }
     }
