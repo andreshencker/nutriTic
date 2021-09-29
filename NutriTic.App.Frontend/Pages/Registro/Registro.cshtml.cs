@@ -17,16 +17,13 @@ namespace NutriTic.App.Frontend.Pages
     {
         private readonly IRepositorioPaciente repositorioPaciente;
 
-        public IEnumerable<Paciente> Pacientes {get;set;}
-
-        public RegistroModel(IRepositorioPaciente repositorioPaciente){
+        public RegistroModel( IRepositorioPaciente repositorioPaciente){
             this.repositorioPaciente=repositorioPaciente;
         }
-        
-        
+        public IEnumerable<Paciente> Pacientes { get; set; }
         public void OnGet()
         {
-            
+            Pacientes= repositorioPaciente.GetAllPacientes();
         }
     }
 }

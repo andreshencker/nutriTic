@@ -1,0 +1,86 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.ValoracionEModel
+@{<div class="content mt-5">
+        <div class="card card-body">
+            <h3>Paciente</h3>
+            <select class="form-control" name="" id="">
+            </select>
+        </div>
+        <div class="card card-body mt-3">
+            <form action="">
+                <h3>Información Paciente</h3>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input class="form-control" name="correo" type="email" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input class="form-control" name="telefono" type="text" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input class="form-control" name="edad" type="text" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="estatura">Estatura</label>
+                    <input class="form-control" name="estatura" type="text" required disabled>
+                </div>
+
+            </form>
+        </div>
+        <div class="card card-body mt-3">
+            <form action="">
+                <h3>Generar valoraciones</h3>
+                <div class="form-group">
+                    <input class="form-control" name="valoracion" type="text" placeholder="Valoración" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="fechaValoracion" type="datetimet" placeholder="Valoración" value=""
+                        hidden required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="comentarios" rows="10"
+                        cols="40">Escribe aquí tus comentarios</textarea>
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-primary btn-block" type="submit">Aceptar</button>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="card card-body mt-3">
+             <div class="form-group">
+                    <input class="form-control" name="idMedida" type="text" placeholder="ID Medida" required>
+                     <button class="form-control btn btn-primary btn-block" type="submit">Aceptar</button>
+            </div>
+            
+            <div class="card card-body mt-3">
+                <h3>Historial de medidas</h3>
+                <table>
+                    <tr>
+                        <th>Id Medida</th>
+                        <th>Fecha Medida</th>
+                        <th>Peso</th>
+                        <th>IMC</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="card card-body mt-3">
+                <h3>Historial de valoraciones</h3>
+                <table>
+                    <tr>
+                        <th>Id Medida</th>
+                        <th>Fecha valoración</th>
+                        <th>valoración</th>
+                        <th>Empleado</th>
+                        <th>Cargo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+}

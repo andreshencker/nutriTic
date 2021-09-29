@@ -1,0 +1,48 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.ProfileModel
+@{
+
+
+    <div class="content mt-5">
+        <div class="card card-body">
+            <form action="" method="POST">  
+                <h3>Datos Paciente</h3>              
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Número Documento" required disabled>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="PrimerNombre" type="text" placeholder="Primer Nombre" required disabled>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="SegundoNombre" type="text" placeholder="Segundo Nombre" required disabled>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="PrimerApellido" type="text" placeholder="Primer Apellido" required disabled>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="SegundoApellido" type="text" placeholder="Segundo Apellido" required disabled>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="Correo" type="email" placeholder="Correo" required name="" id="">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="Telefono" type="tel" placeholder="Telefono" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="Direccion" type="text" placeholder="Dirección" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="Estatura" type="text" placeholder="Estatura" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Fecha Nacimiento</label>
+                    <input class="form-control" type="date" name="fechanacimiento" id="" required disabled>
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-primary btn-block" type="submit">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+}

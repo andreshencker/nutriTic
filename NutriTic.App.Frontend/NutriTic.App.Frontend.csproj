@@ -4,6 +4,8 @@
     <ProjectReference Include="..\NutriTic.App.Persistencia\NutriTic.App.Persistencia.csproj" />
     <ProjectReference Include="..\NutriTic.App.Dominio\NutriTic.App.Dominio.csproj" />
   </ItemGroup>
+  
+
 
   
 
