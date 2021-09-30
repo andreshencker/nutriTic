@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using NutriTic.App.Dominio.Entidades;
+using System.Linq;
+using System.Collections.Generic;
 namespace NutriTic.App.Persistencia
 {
     public class AppContext:DbContext
     {
-
+       
       // public DbSet<Persona> Persona{get;set;}
 
        public DbSet<CargoEmpleado> CargoEmpleado{get;set;}

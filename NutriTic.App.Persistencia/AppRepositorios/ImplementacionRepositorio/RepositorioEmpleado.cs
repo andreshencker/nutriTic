@@ -9,11 +9,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 {
     public class RepositorioEmpleado : IRepositorioEmpleado
     {
-        private readonly AppContext _appContext;
-        public RepositorioEmpleado(AppContext appContext)
-        {
-            _appContext = appContext;
-        }
+      private readonly AppContext _appContext = new AppContext();
 
 
          Empleado IRepositorioEmpleado.CreateEmpleado(Empleado empleado)

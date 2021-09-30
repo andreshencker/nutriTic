@@ -5,6 +5,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioPaciente
     {
+        
         IEnumerable<Paciente> GetAllPacientes();
         Paciente GetOnePaciente(string idPaciente );
         Paciente CreatePaciente(Paciente paciente );

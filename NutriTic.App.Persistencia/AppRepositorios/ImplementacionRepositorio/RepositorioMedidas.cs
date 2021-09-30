@@ -9,11 +9,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 {
     public class RepositorioMedidas : IRepositorioMedidas
     {
-         private readonly AppContext _appContext;
-        public RepositorioMedidas(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+       private readonly AppContext _appContext = new AppContext();
 
         IEnumerable<Medida> IRepositorioMedidas.GetAllMedidas()
         {

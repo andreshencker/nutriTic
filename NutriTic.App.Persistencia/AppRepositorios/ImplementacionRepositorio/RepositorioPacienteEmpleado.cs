@@ -8,11 +8,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 {
     public class RepositorioPacienteEmpleado:IRepositorioPacienteEmpleado
     {
-         private readonly AppContext _appContext;
-        public RepositorioPacienteEmpleado(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+       private readonly AppContext _appContext = new AppContext();
 
         IEnumerable<PacienteEmpleado> IRepositorioPacienteEmpleado.GetAllPacienteEmpleados()
         {

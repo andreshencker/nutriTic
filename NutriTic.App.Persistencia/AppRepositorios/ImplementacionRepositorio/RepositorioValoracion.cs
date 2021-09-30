@@ -9,11 +9,7 @@ namespace NutriTic.App.Persistencia.AppRepositorios.ImplementacionRepositorio
 {
     public class RepositorioValoracion:IRepositorioValoracion
     {
-        private readonly AppContext _appContext;
-        public RepositorioValoracion(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
         Valoracion IRepositorioValoracion.CreateValoracion(Valoracion valoracion)
         {
             var valoracionAdicionado=_appContext.Valoracion.Add(valoracion);

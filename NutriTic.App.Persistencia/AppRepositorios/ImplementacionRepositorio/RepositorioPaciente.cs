@@ -11,11 +11,8 @@ namespace NutriTic.App.Persistencia.AppRepositorios
 
     public class RepositorioPaciente : IRepositorioPaciente
     {
-        private readonly AppContext _appContext;
-        public RepositorioPaciente(AppContext appContext)
-        {
-            _appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
+       
         Paciente IRepositorioPaciente.CreatePaciente(Paciente paciente)
         {
             var pacienteAdicionado=_appContext.Paciente.Add(paciente);
