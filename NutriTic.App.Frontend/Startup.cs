@@ -26,6 +26,11 @@ namespace NutriTic.App.Frontend
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioPaciente,RepositorioPaciente>();       
+            services.AddSingleton<IRepositorioCargoEmpleado,RepositorioCargoEmpleado>();       
+            services.AddSingleton<IRepositorioEmpleado,RepositorioEmpleado>();       
+            services.AddSingleton<IRepositorioMedidas,RepositorioMedidas>();       
+            services.AddSingleton<IRepositorioPacienteEmpleado,RepositorioPacienteEmpleado>();       
+            services.AddSingleton<IRepositorioValoracion,RepositorioValoracion>();       
                         
         }
 
