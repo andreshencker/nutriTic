@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using NutriTic.App.Dominio.Entidades;
+using NutriTic.App.Dominio;
 using System.Linq;
 using System.Collections.Generic;
 namespace NutriTic.App.Persistencia

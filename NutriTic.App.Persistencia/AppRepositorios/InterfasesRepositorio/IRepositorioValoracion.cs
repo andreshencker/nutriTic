@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NutriTic.App.Dominio.Entidades;
+using NutriTic.App.Dominio;
 
-namespace NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio
+namespace NutriTic.App.Persistencia
 {
     public interface IRepositorioValoracion
     {

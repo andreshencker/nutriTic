@@ -13,38 +13,38 @@
         <div class="col-md-6">
             <div class="content-right">
                 <div class="card card-body">
-                <form action="" method="POST">
+                <form action="" method="post">
                 <h3 class="m-3 text-center">Registrese</h3>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Número Documento" required>
+                    <input asp-for="Paciente.Id" class="form-control" type="text" placeholder="Número Documento" required>
                 </div>
                 <div class="form-group">                    
-                    <input class="form-control" name="PrimerNombre" type="text" placeholder="Primer Nombre" required>
+                    <input asp-for="Paciente.PrimerNombre" class="form-control" type="text" placeholder="Primer Nombre" required>                 
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="SegundoNombre" type="text" placeholder="Segundo Nombre" required>
+                    <input asp-for="Paciente.SegundoNombre" class="form-control"  type="text" placeholder="Segundo Nombre" required>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="PrimerApellido" type="text" placeholder="Primer Apellido" required>
+                    <input asp-for="Paciente.PrimerApellido" class="form-control"  type="text" placeholder="Primer Apellido" required>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="SegundoApellido" type="text" placeholder="Segundo Apellido" required>
+                    <input asp-for="Paciente.SegundoApellido" class="form-control"  type="text" placeholder="Segundo Apellido" required>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="Correo" type="email" placeholder="Correo" required name="" id="">
+                    <input asp-for="Paciente.Correo" class="form-control"  type="email" placeholder="Correo" required name="" id="">
                 </div>
                 <div class="form-group">
-                   <input class="form-control" name="Telefono" type="tel" placeholder="Telefono" required>
+                   <input asp-for="Paciente.Telefono" class="form-control" type="tel" placeholder="Telefono" required>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="Direccion" type="text" placeholder="Dirección" required>
+                    <input  class="form-control"  type="text" placeholder="Dirección" >
                 </div>                
                 <div class="form-group">                  
-                    <input class="form-control" name="Estatura" type="text" placeholder="Estatura" required>        
+                    <input asp-for="Paciente.Estatura" class="form-control"  type="text" placeholder="Estatura" required>        
                 </div> 
                 <div class="form-group">
                     <label for="">Fecha Nacimiento</label>
-                    <input class="form-control" type="date" name="fechanacimiento" id=""  required> 
+                    <input asp-for="Paciente.FechaNacimiento" class="form-control" type="date"  id=""  required> 
                 </div>               
                 <div class="form-group">
                     <a href="/Login/Login">Ya tienes cuenta?</a>

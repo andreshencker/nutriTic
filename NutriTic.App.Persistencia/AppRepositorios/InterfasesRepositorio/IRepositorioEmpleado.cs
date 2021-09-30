@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using NutriTic.App.Dominio.Entidades;
-namespace NutriTic.App.Persistencia.AppRepositorios.InterfasesRepositorio
+using NutriTic.App.Dominio;
+namespace NutriTic.App.Persistencia
 {
     public interface IRepositorioEmpleado
     {

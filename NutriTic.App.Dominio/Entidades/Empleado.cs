@@ -1,4 +1,4 @@
-namespace NutriTic.App.Dominio.Entidades
+namespace NutriTic.App.Dominio
 {
     public class Empleado
     {

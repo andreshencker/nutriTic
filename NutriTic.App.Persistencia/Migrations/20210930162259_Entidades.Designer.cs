@@ -10,8 +10,8 @@ using NutriTic.App.Persistencia;
 namespace NutriTic.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210921022727_Inicial")]
-    partial class Inicial
+    [Migration("20210930162259_Entidades")]
+    partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace NutriTic.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.CargoEmpleado", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.CargoEmpleado", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,7 +36,7 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("CargoEmpleado");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Empleado", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Empleado", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -50,7 +50,7 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.Property<string>("PrimerApellido")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PrimerNonbre")
+                    b.Property<string>("PrimerNombre")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SegundoApellido")
@@ -69,15 +69,15 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("Empleado");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Medida", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Medida", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Fecha")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PacienteId")
                         .HasColumnType("nvarchar(450)");
@@ -92,7 +92,7 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("Medida");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Paciente", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Paciente", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -103,8 +103,8 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.Property<int>("Estatura")
                         .HasColumnType("int");
 
-                    b.Property<string>("FechaNacimiento")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("FechaNacimiento")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Latitud")
                         .HasColumnType("nvarchar(max)");
@@ -115,7 +115,7 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.Property<string>("PrimerApellido")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PrimerNonbre")
+                    b.Property<string>("PrimerNombre")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SegundoApellido")
@@ -132,7 +132,7 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("Paciente");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.PacienteEmpleado", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.PacienteEmpleado", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -154,7 +154,7 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("PacienteEmpleado");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Valoracion", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Valoracion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -163,6 +163,9 @@ namespace NutriTic.App.Persistencia.Migrations
 
                     b.Property<string>("EmpleadoId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("MedidaId")
                         .HasColumnType("int");
@@ -179,31 +182,31 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.ToTable("Valoracion");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Empleado", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Empleado", b =>
                 {
-                    b.HasOne("NutriTic.App.Dominio.Entidades.CargoEmpleado", "CargoEmpleado")
+                    b.HasOne("NutriTic.App.Dominio.CargoEmpleado", "CargoEmpleado")
                         .WithMany()
                         .HasForeignKey("CargoEmpleadoId");
 
                     b.Navigation("CargoEmpleado");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Medida", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Medida", b =>
                 {
-                    b.HasOne("NutriTic.App.Dominio.Entidades.Paciente", "Paciente")
+                    b.HasOne("NutriTic.App.Dominio.Paciente", "Paciente")
                         .WithMany()
                         .HasForeignKey("PacienteId");
 
                     b.Navigation("Paciente");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.PacienteEmpleado", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.PacienteEmpleado", b =>
                 {
-                    b.HasOne("NutriTic.App.Dominio.Entidades.Empleado", "Empleado")
+                    b.HasOne("NutriTic.App.Dominio.Empleado", "Empleado")
                         .WithMany()
                         .HasForeignKey("EmpleadoId");
 
-                    b.HasOne("NutriTic.App.Dominio.Entidades.Paciente", "Paciente")
+                    b.HasOne("NutriTic.App.Dominio.Paciente", "Paciente")
                         .WithMany()
                         .HasForeignKey("PacienteId");
 
@@ -212,13 +215,13 @@ namespace NutriTic.App.Persistencia.Migrations
                     b.Navigation("Paciente");
                 });
 
-            modelBuilder.Entity("NutriTic.App.Dominio.Entidades.Valoracion", b =>
+            modelBuilder.Entity("NutriTic.App.Dominio.Valoracion", b =>
                 {
-                    b.HasOne("NutriTic.App.Dominio.Entidades.Empleado", "Empleado")
+                    b.HasOne("NutriTic.App.Dominio.Empleado", "Empleado")
                         .WithMany()
                         .HasForeignKey("EmpleadoId");
 
-                    b.HasOne("NutriTic.App.Dominio.Entidades.Medida", "Medida")
+                    b.HasOne("NutriTic.App.Dominio.Medida", "Medida")
                         .WithMany()
                         .HasForeignKey("MedidaId");
 

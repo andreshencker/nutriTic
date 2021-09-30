@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NutriTic.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Entidades : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,16 +25,16 @@ namespace NutriTic.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PrimerNonbre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Estatura = table.Column<int>(type: "int", nullable: false),
+                    Latitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Longitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FechaNacimiento = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Estatura = table.Column<int>(type: "int", nullable: false),
-                    Latitud = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Longitud = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -45,13 +46,13 @@ namespace NutriTic.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PrimerNonbre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CargoEmpleadoId = table.Column<int>(type: "int", nullable: true),
+                    PrimerNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SegundoNombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SegundoApellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CargoEmpleadoId = table.Column<int>(type: "int", nullable: true)
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,7 +71,7 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Fecha = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Peso = table.Column<int>(type: "int", nullable: false),
                     PacienteId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
@@ -119,7 +120,8 @@ namespace NutriTic.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     comentario = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EmpleadoId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    MedidaId = table.Column<int>(type: "int", nullable: true)
+                    MedidaId = table.Column<int>(type: "int", nullable: true),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
