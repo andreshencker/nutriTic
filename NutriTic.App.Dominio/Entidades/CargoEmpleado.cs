@@ -1,8 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace NutriTic.App.Dominio
-{
+{   [Table("Cargo_Empleado")]
     public class CargoEmpleado
-    {  
-        public int Id {get;set;}
-        public string NonbreCargo {get;set;}
+    {  [Key] 
+        public int IdCargoEmpleado {get;set;}
+
+        [Column(TypeName="varchar(50)")][Required]
+        public string NombreCargo {get;set;}
     }
 }

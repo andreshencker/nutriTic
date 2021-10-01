@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HBOxCde1NX+qO3rsyraJeBu5qEF6nLWZxKZ6/3VHtcedcJHttSDh83nXdVrVnL7e7LLdI8Yc74ICy49dL79Xig==",
+  "dgSpecHash": "lHW/OD+Izz+xX+cweou8Vrftd3N9PIdeKiJnfVs5VMSIaN5SHp62/AaqyZFS2D1UFSaxp1V/syZFNgeA+93Yiw==",
   "success": true,
-  "projectFilePath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj",
+  "projectFilePath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andres\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Andres\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -21,161 +21,178 @@ namespace NutriTic.App.Persistencia.Migrations
 
             modelBuilder.Entity("NutriTic.App.Dominio.CargoEmpleado", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdCargoEmpleado")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("NonbreCargo")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("NombreCargo")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdCargoEmpleado");
 
-                    b.ToTable("CargoEmpleado");
+                    b.ToTable("Cargo_Empleado");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Empleado", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("CargoEmpleadoId")
-                        .HasColumnType("int");
+                    b.Property<string>("IdEmpleado")
+                        .HasColumnType("varchar(15)");
 
                     b.Property<string>("Correo")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(120)");
+
+                    b.Property<int>("IdCargoEmpleado")
+                        .HasColumnType("int");
 
                     b.Property<string>("PrimerApellido")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("PrimerNombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("SegundoApellido")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("SegundoNombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(15)");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdEmpleado");
 
-                    b.HasIndex("CargoEmpleadoId");
+                    b.HasIndex("IdCargoEmpleado");
 
                     b.ToTable("Empleado");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Medida", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdMedida")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
-                    b.Property<string>("PacienteId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("IdPaciente")
+                        .IsRequired()
+                        .HasColumnType("varchar(15)");
 
                     b.Property<int>("Peso")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdMedida");
 
-                    b.HasIndex("PacienteId");
+                    b.HasIndex("IdPaciente");
 
                     b.ToTable("Medida");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Paciente", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("IdPaciente")
+                        .HasColumnType("varchar(15)");
 
                     b.Property<string>("Correo")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(120)");
 
                     b.Property<int>("Estatura")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("FechaNacimiento")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.Property<string>("Latitud")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Longitud")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("PrimerApellido")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("PrimerNombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("SegundoApellido")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("SegundoNombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("varchar(15)");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdPaciente");
 
                     b.ToTable("Paciente");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.PacienteEmpleado", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdPacienteEmpleado")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("EmpleadoId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("IdEmpleado")
+                        .HasColumnType("varchar(15)");
 
-                    b.Property<string>("PacienteId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("IdPaciente")
+                        .HasColumnType("varchar(15)");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdPacienteEmpleado");
 
-                    b.HasIndex("EmpleadoId");
+                    b.HasIndex("IdEmpleado");
 
-                    b.HasIndex("PacienteId");
+                    b.HasIndex("IdPaciente");
 
                     b.ToTable("PacienteEmpleado");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Valoracion", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdValoracion")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("EmpleadoId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
-                    b.Property<int?>("MedidaId")
+                    b.Property<string>("IdEmpleado")
+                        .HasColumnType("varchar(15)");
+
+                    b.Property<int>("IdMedida")
                         .HasColumnType("int");
 
                     b.Property<string>("comentario")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdValoracion");
 
-                    b.HasIndex("EmpleadoId");
+                    b.HasIndex("IdEmpleado");
 
-                    b.HasIndex("MedidaId");
+                    b.HasIndex("IdMedida");
 
                     b.ToTable("Valoracion");
                 });
@@ -184,7 +201,9 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     b.HasOne("NutriTic.App.Dominio.CargoEmpleado", "CargoEmpleado")
                         .WithMany()
-                        .HasForeignKey("CargoEmpleadoId");
+                        .HasForeignKey("IdCargoEmpleado")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CargoEmpleado");
                 });
@@ -193,7 +212,9 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     b.HasOne("NutriTic.App.Dominio.Paciente", "Paciente")
                         .WithMany()
-                        .HasForeignKey("PacienteId");
+                        .HasForeignKey("IdPaciente")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Paciente");
                 });
@@ -202,11 +223,11 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     b.HasOne("NutriTic.App.Dominio.Empleado", "Empleado")
                         .WithMany()
-                        .HasForeignKey("EmpleadoId");
+                        .HasForeignKey("IdEmpleado");
 
                     b.HasOne("NutriTic.App.Dominio.Paciente", "Paciente")
                         .WithMany()
-                        .HasForeignKey("PacienteId");
+                        .HasForeignKey("IdPaciente");
 
                     b.Navigation("Empleado");
 
@@ -217,11 +238,13 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     b.HasOne("NutriTic.App.Dominio.Empleado", "Empleado")
                         .WithMany()
-                        .HasForeignKey("EmpleadoId");
+                        .HasForeignKey("IdEmpleado");
 
                     b.HasOne("NutriTic.App.Dominio.Medida", "Medida")
                         .WithMany()
-                        .HasForeignKey("MedidaId");
+                        .HasForeignKey("IdMedida")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Empleado");
 

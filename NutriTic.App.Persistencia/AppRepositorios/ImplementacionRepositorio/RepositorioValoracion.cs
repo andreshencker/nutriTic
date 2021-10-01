@@ -18,7 +18,7 @@ namespace NutriTic.App.Persistencia
 
         void IRepositorioValoracion.DeleteValoracion(int idValoracion)
         {
-            var valoracionEncontrado=_appContext.Valoracion.FirstOrDefault(p => p.Id==idValoracion);
+            var valoracionEncontrado=_appContext.Valoracion.FirstOrDefault(p => p.IdValoracion==idValoracion);
             if(valoracionEncontrado==null)
             return;
             _appContext.Valoracion.Remove(valoracionEncontrado);
@@ -32,7 +32,7 @@ namespace NutriTic.App.Persistencia
 
         Valoracion IRepositorioValoracion.GetOneValoracion(int idValoracion)
         {
-            return _appContext.Valoracion.FirstOrDefault(p => p.Id == idValoracion);
+            return _appContext.Valoracion.FirstOrDefault(p => p.IdValoracion == idValoracion);
 
         }
 

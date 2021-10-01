@@ -18,7 +18,7 @@ namespace NutriTic.App.Persistencia
 
          CargoEmpleado IRepositorioCargoEmpleado.GetOneCargoEmpleado(int idCargoEmpleado)
         {
-            return _appContext.CargoEmpleado.FirstOrDefault(p => p.Id == idCargoEmpleado);
+            return _appContext.CargoEmpleado.FirstOrDefault(p => p.IdCargoEmpleado == idCargoEmpleado);
 
         }
 
@@ -31,7 +31,7 @@ namespace NutriTic.App.Persistencia
 
         void IRepositorioCargoEmpleado.DeleteCargoEmpleado(int idCargoEmpleado)
         {
-            var cargoempleadoEncontrado=_appContext.CargoEmpleado.FirstOrDefault(p => p.Id==idCargoEmpleado);
+            var cargoempleadoEncontrado=_appContext.CargoEmpleado.FirstOrDefault(p => p.IdCargoEmpleado==idCargoEmpleado);
             if(cargoempleadoEncontrado==null)
             return;
             _appContext.CargoEmpleado.Remove(cargoempleadoEncontrado);

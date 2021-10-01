@@ -20,7 +20,7 @@ namespace NutriTic.App.Persistencia
 
         void IRepositorioEmpleado.DeleteEmpleado(string idEmpleado)
         {
-            var empleadoEncontrado=_appContext.Empleado.FirstOrDefault(p => p.Id==idEmpleado);
+            var empleadoEncontrado=_appContext.Empleado.FirstOrDefault(p => p.IdEmpleado==idEmpleado);
             if(empleadoEncontrado==null)
             return;
             _appContext.Empleado.Remove(empleadoEncontrado);
@@ -34,7 +34,7 @@ namespace NutriTic.App.Persistencia
 
         Empleado IRepositorioEmpleado.GetOneEmpleado(string idEmpleado)
         {
-            return _appContext.Empleado.FirstOrDefault(p => p.Id == idEmpleado);
+            return _appContext.Empleado.FirstOrDefault(p => p.IdEmpleado == idEmpleado);
 
         }
     }

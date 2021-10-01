@@ -16,7 +16,7 @@ namespace NutriTic.App.Persistencia
 
          Medida IRepositorioMedidas.GetOneMedida(int idMedida)
         {
-            return _appContext.Medida.FirstOrDefault(p => p.Id == idMedida);
+            return _appContext.Medida.FirstOrDefault(p => p.IdMedida == idMedida);
 
         }
 
@@ -29,7 +29,7 @@ namespace NutriTic.App.Persistencia
 
         void IRepositorioMedidas.DeleteMedida(int idMedida)
         {
-            var medidaEncontrado=_appContext.Medida.FirstOrDefault(p => p.Id==idMedida);
+            var medidaEncontrado=_appContext.Medida.FirstOrDefault(p => p.IdMedida==idMedida);
             if(medidaEncontrado==null)
             return;
             _appContext.Medida.Remove(medidaEncontrado);

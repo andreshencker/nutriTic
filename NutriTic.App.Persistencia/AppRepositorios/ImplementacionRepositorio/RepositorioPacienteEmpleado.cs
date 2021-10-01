@@ -15,7 +15,7 @@ namespace NutriTic.App.Persistencia
 
          PacienteEmpleado IRepositorioPacienteEmpleado.GetOnePacienteEmpleado(int idPacienteEmpleado)
         {
-            return _appContext.PacienteEmpleado.FirstOrDefault(p => p.Id == idPacienteEmpleado);
+            return _appContext.PacienteEmpleado.FirstOrDefault(p => p.IdPacienteEmpleado == idPacienteEmpleado);
 
         }
 
@@ -28,7 +28,7 @@ namespace NutriTic.App.Persistencia
 
         void IRepositorioPacienteEmpleado.DeletePacienteEmpleado(int idPacienteEmpleado)
         {
-            var pacienteempleadoEncontrado=_appContext.PacienteEmpleado.FirstOrDefault(p => p.Id==idPacienteEmpleado);
+            var pacienteempleadoEncontrado=_appContext.PacienteEmpleado.FirstOrDefault(p => p.IdPacienteEmpleado==idPacienteEmpleado);
             if(pacienteempleadoEncontrado==null)
             return;
             _appContext.PacienteEmpleado.Remove(pacienteempleadoEncontrado);

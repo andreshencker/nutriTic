@@ -23,7 +23,7 @@ namespace NutriTic.App.Frontend.Pages
 
        
 
-        public var OnGet(String idUsuario,int rol)
+        public IActionResult OnGet(String idUsuario,int rol)
         {
             
             if(rol==1){
