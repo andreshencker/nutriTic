@@ -1,0 +1,30 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.EmpleadoModel
+@{
+}
+    <h1>Nuevo Empleado</h1>
+    <form method="post">
+        <div class="form-group">
+            <input class="form-control" asp-for="Empleado.Id" placeholder="Número Identificación" required  >
+        </div>
+        <div class="form-group">
+            <input class="form-control" asp-for="Empleado.PrimerNombre" placeholder="Primer Nombre" required  >
+        </div>
+        <div class="form-group">            
+            <input class="form-control" asp-for="Empleado.SegundoNombre" placeholder="Segundo Nombre" required >
+        </div>
+        <div class="form-group">
+            <input class="form-control" asp-for="Empleado.PrimerApellido" placeholder="Primer Apellido" required  >
+        </div>
+        <div class="form-group">            
+            <input class="form-control" asp-for="Empleado.SegundoApellido" placeholder="Segundo Apellido" required >
+        </div>
+        <div class="form-group">            
+            <input class="form-control" type="email" asp-for="Empleado.Correo" placeholder="correo" required >
+        </div>
+        <div class="form-group">            
+            <input class="form-control" type="tel" asp-for="Empleado.Telefono" placeholder="Telefono" required >
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Crear Empleado</button>
+    </form>

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj": {}
+    "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj": {}
   },
   "projects": {
     "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
@@ -65,14 +65,14 @@
         }
       }
     },
-    "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj": {
+    "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj",
+        "projectUniqueName": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj",
         "projectName": "NutriTic.App.Frontend",
-        "projectPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj",
+        "projectPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj",
         "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-        "outputPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.frontend\\obj\\",
+        "outputPath": "I:\\proyectos\\reto\\nutriTic\\NutriTic.App.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Andres\\AppData\\Roaming\\NuGet\\NuGet.Config",
