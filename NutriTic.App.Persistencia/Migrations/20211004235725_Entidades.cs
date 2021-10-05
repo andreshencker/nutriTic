@@ -26,15 +26,15 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     IdPaciente = table.Column<string>(type: "varchar(15)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "varchar(50)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "varchar(50)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "varchar(50)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "varchar(50)", nullable: false),
                     SegundoApellido = table.Column<string>(type: "varchar(50)", nullable: false),
                     Correo = table.Column<string>(type: "varchar(120)", nullable: false),
                     Telefono = table.Column<string>(type: "varchar(15)", nullable: false),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime", nullable: false),
                     Estatura = table.Column<int>(type: "int", nullable: false),
-                    Latitud = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Longitud = table.Column<string>(type: "varchar(50)", nullable: false)
+                    Latitud = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Longitud = table.Column<string>(type: "varchar(50)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -47,7 +47,7 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     IdEmpleado = table.Column<string>(type: "varchar(15)", nullable: false),
                     PrimerNombre = table.Column<string>(type: "varchar(50)", nullable: false),
-                    SegundoNombre = table.Column<string>(type: "varchar(50)", nullable: false),
+                    SegundoNombre = table.Column<string>(type: "varchar(50)", nullable: true),
                     PrimerApellido = table.Column<string>(type: "varchar(50)", nullable: false),
                     SegundoApellido = table.Column<string>(type: "varchar(50)", nullable: false),
                     Correo = table.Column<string>(type: "varchar(120)", nullable: false),
@@ -92,8 +92,8 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     IdPacienteEmpleado = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdPaciente = table.Column<string>(type: "varchar(15)", nullable: true),
-                    IdEmpleado = table.Column<string>(type: "varchar(15)", nullable: true)
+                    IdPaciente = table.Column<string>(type: "varchar(15)", nullable: false),
+                    IdEmpleado = table.Column<string>(type: "varchar(15)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,13 +103,13 @@ namespace NutriTic.App.Persistencia.Migrations
                         column: x => x.IdEmpleado,
                         principalTable: "Empleado",
                         principalColumn: "IdEmpleado",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PacienteEmpleado_Paciente_IdPaciente",
                         column: x => x.IdPaciente,
                         principalTable: "Paciente",
                         principalColumn: "IdPaciente",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -120,7 +120,7 @@ namespace NutriTic.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     comentario = table.Column<string>(type: "text", nullable: false),
                     Fecha = table.Column<DateTime>(type: "datetime", nullable: false),
-                    IdEmpleado = table.Column<string>(type: "varchar(15)", nullable: true),
+                    IdEmpleado = table.Column<string>(type: "varchar(15)", nullable: false),
                     IdMedida = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -131,7 +131,7 @@ namespace NutriTic.App.Persistencia.Migrations
                         column: x => x.IdEmpleado,
                         principalTable: "Empleado",
                         principalColumn: "IdEmpleado",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Valoracion_Medida_IdMedida",
                         column: x => x.IdMedida,

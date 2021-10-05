@@ -5,11 +5,11 @@
 <a class="btn btn-primary mt-5" asp-page="/Empleado/Empleado">Crear Nuevo Empleado</a>
 <div class="card card-body mt-3">
     <h2>Lista Empleado</h2>
-    <table class="table">
+    <table class="table table-bordered">
 
         <thead>
             <tr>
-                <th scope="col">Identificacion</th>
+                <th scope="col">Identificación</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Correo</th>
                 <th scope="col">Telefono</th>
@@ -18,27 +18,24 @@
            
             </tr>
         </thead>
-
-        @foreach (var e in Model.Empleados)
+        <tbody>
+            @foreach (var e in Model.Empleados)
         {
-            <tr>
-                <td>@e.Id</td>
-                <td>@e.PrimerNombre @e.SegundoNombre @e.PrimerApellido @e.SegundoApellido </td>
-                <td>@e.Correo</td>
-                <td>@e.Telefono</td>
-                <td>@e.CargoEmpleado.</td>
+                <tr>
+                    <td>@e.IdEmpleado</td>
+                    <td>@e.PrimerNombre @e.SegundoNombre @e.PrimerApellido @e.SegundoApellido </td>
+                    <td>@e.Correo</td>
+                    <td>@e.Telefono</td>
+                    <td>@e.IdCargoEmpleado</td>                         
+                    <td>
+                        <a class="btn btn-outline-primary" asp-page="./ActualizarEmpleado" asp-route-id="@e.IdEmpleado">Editar</a>
+                        <a class="btn btn-outline-danger" asp-page="./EliminarEmpleado" asp-route-id="@e.IdEmpleado">Eliminar</a>
+                    </td>
                 
-                @foreach (var ce in Model.CargoEmpleados)
-                {
-                     <td>@ce.NonbreCargo</td>
-                }
-               
-                <td>
-                    <a class="btn btn-outline-primary" asp-page="./Actualizar" asp-route-id="@e.Id">Editar</a>
-                    <a class="btn btn-outline-danger" asp-page="./Eliminar" asp-route-id="@e.Id">Eliminar</a>
-                </td>
-             
-            </tr>
+                </tr>
         }
+        </tbody>
+
+       
     </table>
 </div>

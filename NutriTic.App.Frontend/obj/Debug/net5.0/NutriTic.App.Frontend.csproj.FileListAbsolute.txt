@@ -156,3 +156,7 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Va
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\Humanizer.dll
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutEmpleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Empleado\ActualizarEmpleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Empleado\EliminarEmpleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Empleado\Empleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Empleado\ListaEmpleado.cshtml.g.cs

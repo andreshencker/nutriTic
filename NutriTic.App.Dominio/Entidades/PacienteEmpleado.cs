@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace NutriTic.App.Dominio
 {
     public class PacienteEmpleado
@@ -7,12 +8,14 @@ namespace NutriTic.App.Dominio
         public int IdPacienteEmpleado  {get;set;}
 
         [Column(TypeName="varchar(15)")]
+        [Required]
         public string IdPaciente { get; set; }
 
         [ForeignKey("IdPaciente")]
         public Paciente Paciente  {get;set;}
 
         [Column(TypeName="varchar(15)")]
+        [Required]
         public string IdEmpleado { get; set; }
         
         [ForeignKey("IdEmpleado")]

@@ -29,7 +29,7 @@ namespace NutriTic.App.Persistencia
 
         IEnumerable<Empleado> IRepositorioEmpleado.GetAllEmpleados()
         {
-            return _appContext.Empleado;
+            return _appContext.Empleado.ToList();
         }
 
         Empleado IRepositorioEmpleado.GetOneEmpleado(string idEmpleado)

@@ -10,7 +10,7 @@ using NutriTic.App.Persistencia;
 namespace NutriTic.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211001232131_Entidades")]
+    [Migration("20211004235725_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,7 +62,6 @@ namespace NutriTic.App.Persistencia.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("SegundoNombre")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Telefono")
@@ -116,11 +115,9 @@ namespace NutriTic.App.Persistencia.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("Latitud")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Longitud")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("PrimerApellido")
@@ -136,7 +133,6 @@ namespace NutriTic.App.Persistencia.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("SegundoNombre")
-                        .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Telefono")
@@ -156,9 +152,11 @@ namespace NutriTic.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("IdEmpleado")
+                        .IsRequired()
                         .HasColumnType("varchar(15)");
 
                     b.Property<string>("IdPaciente")
+                        .IsRequired()
                         .HasColumnType("varchar(15)");
 
                     b.HasKey("IdPacienteEmpleado");
@@ -181,6 +179,7 @@ namespace NutriTic.App.Persistencia.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("IdEmpleado")
+                        .IsRequired()
                         .HasColumnType("varchar(15)");
 
                     b.Property<int>("IdMedida")
@@ -225,11 +224,15 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     b.HasOne("NutriTic.App.Dominio.Empleado", "Empleado")
                         .WithMany()
-                        .HasForeignKey("IdEmpleado");
+                        .HasForeignKey("IdEmpleado")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("NutriTic.App.Dominio.Paciente", "Paciente")
                         .WithMany()
-                        .HasForeignKey("IdPaciente");
+                        .HasForeignKey("IdPaciente")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Empleado");
 
@@ -240,7 +243,9 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     b.HasOne("NutriTic.App.Dominio.Empleado", "Empleado")
                         .WithMany()
-                        .HasForeignKey("IdEmpleado");
+                        .HasForeignKey("IdEmpleado")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("NutriTic.App.Dominio.Medida", "Medida")
                         .WithMany()
