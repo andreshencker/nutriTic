@@ -10,11 +10,7 @@ using NutriTic.App.Persistencia;
 namespace NutriTic.App.Frontend.Pages
 {
     public class ActualizarEmpleadoModel : PageModel
-    {
-        public void OnGet()
-        {
-        }
-        
+    {       
         private readonly IRepositorioEmpleado repositorioEmpleado;
         public Empleado Empleado {get;set;}
 
@@ -32,10 +28,10 @@ namespace NutriTic.App.Frontend.Pages
             }
         }
 
-        /*public IActionResult OnPost(Empleado empleado)
+        public IActionResult OnPost(Empleado empleado)
         {
             repositorioEmpleado.UpdateEmpleado(empleado);
-            return RedirectToPage("Index");
-        }*/
+            return RedirectToPage("./ListaEmpleado");
+        }
     }
 }

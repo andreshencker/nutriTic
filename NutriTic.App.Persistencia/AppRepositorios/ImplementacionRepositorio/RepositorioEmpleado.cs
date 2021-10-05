@@ -11,11 +11,28 @@ namespace NutriTic.App.Persistencia
       private readonly AppContext _appContext = new AppContext();
 
 
-         Empleado IRepositorioEmpleado.CreateEmpleado(Empleado empleado)
+        Empleado IRepositorioEmpleado.CreateEmpleado(Empleado empleado)
         {
             var empleadoAdicionado=_appContext.Empleado.Add(empleado);
             _appContext.SaveChanges();
             return empleadoAdicionado.Entity;
+        }
+
+        Empleado IRepositorioEmpleado.UpdateEmpleado(Empleado empleado)
+        {
+            var empleadoEncontrado=_appContext.Empleado.FirstOrDefault(p => p.IdEmpleado==empleado.IdEmpleado);
+            if(empleadoEncontrado!=null){
+                empleadoEncontrado.PrimerNombre=empleado.PrimerNombre;
+                empleadoEncontrado.SegundoNombre=empleado.SegundoNombre;
+                empleadoEncontrado.PrimerApellido=empleado.PrimerApellido;
+                empleadoEncontrado.SegundoApellido=empleado.SegundoApellido;
+                empleadoEncontrado.Correo=empleado.Correo;
+                empleadoEncontrado.Telefono=empleado.Telefono;
+                empleadoEncontrado.IdCargoEmpleado=empleado.IdCargoEmpleado;
+                _appContext.SaveChanges();
+            }
+           
+            return empleadoEncontrado;
         }
 
         void IRepositorioEmpleado.DeleteEmpleado(string idEmpleado)

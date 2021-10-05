@@ -4,47 +4,58 @@
 }
 <h1>Actualizacion de datos</h1>
 <form method="post">
-    <div class="form-group">
-        <label asp-for="Empleado.IdEmpleado"></label>
-        <input asp-for="Empleado.IdEmpleado" class="form-control" readonly>        
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.IdEmpleado">Número de Identificación</label>
+            <input class="form-control" asp-for="Empleado.IdEmpleado" required>
+            <span asp-validation-for="Empleado.IdEmpleado"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Empleado.PrimerNombre"></label>
+            <input class="form-control" asp-for="Empleado.PrimerNombre" required>
+            <span asp-validation-for="Empleado.PrimerNombre"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Empleado.PrimerNombre"></label>
-        <input asp-for="Empleado.PrimerNombre" class="form-control">        
+
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.SegundoNombre"></label>
+            <input class="form-control" asp-for="Empleado.SegundoNombre">
+            <span asp-validation-for="Empleado.SegundoNombre"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Empleado.PrimerApellido">Primer Apellido</label>
+            <input class="form-control" asp-for="Empleado.PrimerApellido" required>
+            <span asp-validation-for="Empleado.PrimerApellido"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Empleado.SegundoNombre"></label>
-        <input asp-for="Empleado.SegundoNombre" class="form-control">        
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.SegundoApellido">Segundo Apellido</label>
+            <input class="form-control" asp-for="Empleado.SegundoApellido" required>
+            <span asp-validation-for="Empleado.SegundoApellido"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Empleado.Correo">Correo</label>
+            <input class="form-control" type="email" asp-for="Empleado.Correo" required>
+            <span asp-validation-for="Empleado.Correo"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Empleado.PrimerApellido"></label>
-        <input asp-for="Empleado.PrimerApellido" class="form-control">
-        
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.Telefono">Telefono</label>
+            <input class="form-control" type="tel" asp-for="Empleado.Telefono" required>
+            <span asp-validation-for="Empleado.Telefono"></span>
+        </div>
+        <div class="form-group col">
+            <Label asp-for="Empleado.IdCargoEmpleado">Id cargo</Label>
+            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado" placeholder="Id cargo" required>
+            <span asp-validation-for="Empleado.IdCargoEmpleado"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Empleado.SegundoApellido"></label>
-        <input asp-for="Empleado.SegundoApellido" class="form-control">
-     
-    </div>
-    <div class="form-group">
-        <label asp-for="Empleado.Correo"></label>
-        <input type="email" asp-for="Empleado.Correo" class="form-control">
-        
-    </div>
-    <div class="form-group">
-        <label asp-for="Empleado.Telefono"></label>
-        <input type="tel" asp-for="Empleado.Telefono" class="form-control">
-        
-    </div>
-    <div class="form-group">
-        <label asp-for="Empleado.CargoEmpleado"></label>
-        <select class="form-control" name="" id="">
-        
-        </select>
-        
-    </div>
- 
-   
 
     <button type="submit" class="btn btn-primary">Actualizar</button>
 

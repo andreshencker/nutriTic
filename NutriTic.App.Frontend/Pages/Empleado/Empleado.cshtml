@@ -2,42 +2,60 @@
 @model NutriTic.App.Frontend.Pages.EmpleadoModel
 @{
 }
-    <h1>Nuevo Empleado</h1>
-    <form method="post">
-        <div class="form-group">
-            <input class="form-control" asp-for="Empleado.IdEmpleado" placeholder="Número Identificación" required  >
-            <span asp-validation-for="Empleado.IdEmpleado" ></span>
+<h1>Nuevo Empleado</h1>
+<form method="post">
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.IdEmpleado">Número de Identificación</label>
+            <input class="form-control" asp-for="Empleado.IdEmpleado" required>
+            <span asp-validation-for="Empleado.IdEmpleado"></span>
         </div>
-        <div class="form-group">
-            <input class="form-control" asp-for="Empleado.PrimerNombre" placeholder="Primer Nombre" required  >
-            <span asp-validation-for="Empleado.PrimerNombre" ></span>
+        <div class="form-group col">
+            <label asp-for="Empleado.PrimerNombre">Primer Nombre</label>
+            <input class="form-control" asp-for="Empleado.PrimerNombre" required>
+            <span asp-validation-for="Empleado.PrimerNombre"></span>
         </div>
-        <div class="form-group">            
-            <input class="form-control" asp-for="Empleado.SegundoNombre" placeholder="Segundo Nombre">
-            <span asp-validation-for="Empleado.SegundoNombre" ></span>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.SegundoNombre">Segundo Nombre</label>
+            <input class="form-control" asp-for="Empleado.SegundoNombre">
+            <span asp-validation-for="Empleado.SegundoNombre"></span>
         </div>
-        <div class="form-group">
-            <input class="form-control" asp-for="Empleado.PrimerApellido" placeholder="Primer Apellido" required  >
-            <span asp-validation-for="Empleado.PrimerApellido" ></span>
+        <div class="form-group col">
+            <label asp-for="Empleado.PrimerApellido">Primer Apellido</label>
+            <input class="form-control" asp-for="Empleado.PrimerApellido" required>
+            <span asp-validation-for="Empleado.PrimerApellido"></span>
         </div>
-        <div class="form-group">            
-            <input class="form-control" asp-for="Empleado.SegundoApellido" placeholder="Segundo Apellido" required >
-            <span asp-validation-for="Empleado.SegundoApellido" ></span>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.SegundoApellido">Segundo Apellido</label>
+            <input class="form-control" asp-for="Empleado.SegundoApellido" required>
+            <span asp-validation-for="Empleado.SegundoApellido"></span>
         </div>
-        <div class="form-group">            
-            <input class="form-control" type="email" asp-for="Empleado.Correo" placeholder="correo" required >
-            <span asp-validation-for="Empleado.Correo" ></span>
+        <div class="form-group col">
+            <label asp-for="Empleado.Correo">Correo</label>
+            <input class="form-control" type="email" asp-for="Empleado.Correo" required>
+            <span asp-validation-for="Empleado.Correo"></span>
         </div>
-        <div class="form-group">            
-            <input class="form-control" type="tel" asp-for="Empleado.Telefono" placeholder="Telefono" required >
-            <span asp-validation-for="Empleado.Telefono" ></span>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.Telefono">Telefono</label>
+            <input class="form-control" type="tel" asp-for="Empleado.Telefono" required>
+            <span asp-validation-for="Empleado.Telefono"></span>
         </div>
-        <div class="form-group">            
-            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado" placeholder="Id cargo" required >
-            <span asp-validation-for="Empleado.Telefono" ></span>
+        <div class="form-group col">
+            <Label asp-for="Empleado.IdCargoEmpleado">Id cargo</Label>
+            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado" placeholder="Id cargo" required>
+            <span asp-validation-for="Empleado.IdCargoEmpleado"></span>
         </div>
-        
-       
-        
-        <button type="submit" class="btn btn-primary">Crear Empleado</button>
-    </form>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear Empleado</button>
+</form>
