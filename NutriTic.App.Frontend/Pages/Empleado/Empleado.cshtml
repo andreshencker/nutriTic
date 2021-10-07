@@ -7,55 +7,56 @@
 
     <div class="row">
         <div class="form-group col">
-            <label asp-for="Empleado.IdEmpleado">Número de Identificación</label>
+            <label asp-for="Empleado.IdEmpleado"></label>
             <input class="form-control" asp-for="Empleado.IdEmpleado" required>
-            <span asp-validation-for="Empleado.IdEmpleado"></span>
+            <span asp-validation-for="Empleado.IdEmpleado" class="text-danger"></span>
         </div>
         <div class="form-group col">
-            <label asp-for="Empleado.PrimerNombre">Primer Nombre</label>
+            <label asp-for="Empleado.PrimerNombre"></label>
             <input class="form-control" asp-for="Empleado.PrimerNombre" required>
-            <span asp-validation-for="Empleado.PrimerNombre"></span>
+            <span asp-validation-for="Empleado.PrimerNombre" class="text-danger"></span>
         </div>
     </div>
 
 
     <div class="row">
         <div class="form-group col">
-            <label asp-for="Empleado.SegundoNombre">Segundo Nombre</label>
+            <label asp-for="Empleado.SegundoNombre"></label>
             <input class="form-control" asp-for="Empleado.SegundoNombre">
-            <span asp-validation-for="Empleado.SegundoNombre"></span>
+            <span asp-validation-for="Empleado.SegundoNombre" class="text-danger"></span>
         </div>
         <div class="form-group col">
-            <label asp-for="Empleado.PrimerApellido">Primer Apellido</label>
+            <label asp-for="Empleado.PrimerApellido"></label>
             <input class="form-control" asp-for="Empleado.PrimerApellido" required>
-            <span asp-validation-for="Empleado.PrimerApellido"></span>
+            <span asp-validation-for="Empleado.PrimerApellido" class="text-danger"></span>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col">
-            <label asp-for="Empleado.SegundoApellido">Segundo Apellido</label>
+            <label asp-for="Empleado.SegundoApellido"></label>
             <input class="form-control" asp-for="Empleado.SegundoApellido" required>
-            <span asp-validation-for="Empleado.SegundoApellido"></span>
+            <span asp-validation-for="Empleado.SegundoApellido" class="text-danger"></span>
         </div>
         <div class="form-group col">
-            <label asp-for="Empleado.Correo">Correo</label>
+            <label asp-for="Empleado.Correo"></label>
             <input class="form-control" type="email" asp-for="Empleado.Correo" required>
-            <span asp-validation-for="Empleado.Correo"></span>
+            <span asp-validation-for="Empleado.Correo" class="text-danger"></span>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col">
-            <label asp-for="Empleado.Telefono">Telefono</label>
+            <label asp-for="Empleado.Telefono"></label>
             <input class="form-control" type="tel" asp-for="Empleado.Telefono" required>
-            <span asp-validation-for="Empleado.Telefono"></span>
+            <span asp-validation-for="Empleado.Telefono" class="text-danger"></span>
         </div>
         <div class="form-group col">
-            <Label asp-for="Empleado.IdCargoEmpleado">Id cargo</Label>
-            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado" placeholder="Id cargo" required>
-            <span asp-validation-for="Empleado.IdCargoEmpleado"></span>
+            <Label asp-for="Empleado.IdCargoEmpleado"></Label>
+            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado"  required>
+            <span asp-validation-for="Empleado.IdCargoEmpleado" class="text-danger"></span>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Crear Empleado</button>
+    <a class="btn btn-secondary" asp-page="./ListaEmpleado">Volver</a>
 </form>

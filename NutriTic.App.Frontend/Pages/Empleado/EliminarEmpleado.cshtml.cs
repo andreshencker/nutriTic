@@ -12,7 +12,7 @@ namespace NutriTic.App.Frontend.Pages
 {
     public class EliminarEmpleadoModel : PageModel
     {
-         private readonly IRepositorioEmpleado repositorioEmpleado;
+        private readonly IRepositorioEmpleado repositorioEmpleado;
 
         public Empleado Empleado{get;set;}
 
@@ -33,10 +33,8 @@ namespace NutriTic.App.Frontend.Pages
 
         public IActionResult OnPost(string id){
             repositorioEmpleado.DeleteEmpleado(id);
-            return RedirectToPage("Index");
+            return RedirectToPage("./ListaEmpleado");
         }
-        public void OnGet()
-        {
-        }
+        
     }
 }

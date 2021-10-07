@@ -18,7 +18,6 @@ namespace NutriTic.App.Dominio
         [Column(TypeName="varchar(50)")]
         [Required(ErrorMessage="Ingrese su primer nombre")]
         [Display(Name="Primer Nombre")]
-
         public string PrimerNombre {get;set;}
 
         [Column(TypeName="varchar(50)")]

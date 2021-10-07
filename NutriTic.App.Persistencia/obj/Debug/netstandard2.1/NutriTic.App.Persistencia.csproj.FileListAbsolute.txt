@@ -73,3 +73,16 @@ C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Persist
 C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.pdb
 C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.AssemblyReference.cache
 C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.deps.json
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.dll
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.pdb
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Dominio.dll
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Dominio.pdb
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfoInputs.cache
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfo.cs
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CoreCompileInputs.cache
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CopyComplete
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.dll
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.pdb
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.AssemblyReference.cache
+E:\proyectos\prueba\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig

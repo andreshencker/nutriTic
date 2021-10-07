@@ -5799,19 +5799,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Intel I3\\.nuget\\packages\\": {}
+    "C:\\Users\\Andres\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj",
+      "projectUniqueName": "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj",
       "projectName": "NutriTic.App.Frontend",
-      "projectPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Frontend\\NutriTic.App.Frontend.csproj",
-      "packagesPath": "C:\\Users\\Intel I3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Frontend\\obj\\",
+      "projectPath": "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.frontend\\NutriTic.App.Frontend.csproj",
+      "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
+      "outputPath": "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Intel I3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Andres\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5823,11 +5823,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj"
+            "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj": {
+              "projectPath": "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.Dominio\\NutriTic.App.Dominio.csproj"
             },
-            "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Intel I3\\OneDrive\\Documentos\\app nutritic\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj"
+            "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj": {
+              "projectPath": "E:\\proyectos\\prueba\\nutriTic\\NutriTic.App.Persistencia\\NutriTic.App.Persistencia.csproj"
             }
           }
         }
@@ -5867,7 +5867,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

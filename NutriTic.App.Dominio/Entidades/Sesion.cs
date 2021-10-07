@@ -1,12 +1,12 @@
 using System;
 
-namespace NutriTic.App.Dominio.Entidades
+namespace NutriTic.App.Dominio
 {
     public class Sesion
     {
         private static Sesion instance =null;
-        public string IdUsuario { get; set; }
-        public static object _lock = new object();
+        private string IdUsuario { get; set; }
+        private static object _lock = new object();
 
         private Sesion()
         {

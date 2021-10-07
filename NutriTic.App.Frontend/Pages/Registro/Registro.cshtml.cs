@@ -16,6 +16,8 @@ namespace NutriTic.App.Frontend.Pages
         private readonly IRepositorioPaciente repositorioPaciente;
         public Paciente Paciente{get;set;}
 
+        
+
         public RegistroModel( IRepositorioPaciente repositorioPaciente){
             this.repositorioPaciente=repositorioPaciente;
         }
@@ -25,9 +27,17 @@ namespace NutriTic.App.Frontend.Pages
            Paciente= new Paciente();
         }
         public IActionResult OnPost(Paciente paciente)
-        {
+        {   //iniciando la sesión de usario
+            Sesion.Login(paciente.IdPaciente);
+            
+            //creando al paciente
             repositorioPaciente.CreatePaciente(paciente);
             return RedirectToPage("/Medidas/Medidas");
+            
+            //consultar a los empleados
+            // asignar un nutricionista aleatoriamente
+            // asignar un coach aleatoriamente
+
         }
     }
 }

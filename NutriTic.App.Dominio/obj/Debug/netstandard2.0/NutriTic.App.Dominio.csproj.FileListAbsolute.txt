@@ -36,3 +36,13 @@ C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Dominio
 C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.pdb
 C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.csproj.AssemblyReference.cache
 C:\Users\Intel I3\OneDrive\Documentos\app nutritic\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\bin\Debug\netstandard2.0\NutriTic.App.Dominio.deps.json
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\bin\Debug\netstandard2.0\NutriTic.App.Dominio.dll
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\bin\Debug\netstandard2.0\NutriTic.App.Dominio.pdb
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.AssemblyInfoInputs.cache
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.AssemblyInfo.cs
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.csproj.CoreCompileInputs.cache
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.dll
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.pdb
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.csproj.AssemblyReference.cache
+E:\proyectos\prueba\nutriTic\NutriTic.App.Dominio\obj\Debug\netstandard2.0\NutriTic.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig

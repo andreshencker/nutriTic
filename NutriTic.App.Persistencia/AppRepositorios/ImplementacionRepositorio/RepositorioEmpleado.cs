@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using NutriTic.App.Dominio;
 
 
+
 namespace NutriTic.App.Persistencia
 {
     public class RepositorioEmpleado : IRepositorioEmpleado
@@ -37,7 +38,7 @@ namespace NutriTic.App.Persistencia
 
         void IRepositorioEmpleado.DeleteEmpleado(string idEmpleado)
         {
-            var empleadoEncontrado=_appContext.Empleado.FirstOrDefault(p => p.IdEmpleado==idEmpleado);
+            var empleadoEncontrado=_appContext.Empleado.Find(idEmpleado);
             if(empleadoEncontrado==null)
             return;
             _appContext.Empleado.Remove(empleadoEncontrado);

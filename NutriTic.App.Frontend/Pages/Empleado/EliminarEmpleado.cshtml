@@ -5,15 +5,54 @@
 <h1>Eliminar Paciente</h1>
 
 <form method="post">
-    <div class="form-group">
-        <label asp-for="Empleado.IdEmpleado"></label>
-        <input asp-for="Empleado.IdEmpleado" class="form-control" readonly>
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.IdEmpleado"></label>
+            <input class="form-control" asp-for="Empleado.IdEmpleado" readonly>            
+        </div>
+        <div class="form-group col">
+            <label asp-for="Empleado.PrimerNombre"></label>
+            <input class="form-control" asp-for="Empleado.PrimerNombre" readonly>          
+        </div>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Empleado.PrimerNombre"></label>
-        <input asp-for="Empleado.PrimerNombre" class="form-control" readonly>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.SegundoNombre"></label>
+            <input class="form-control" asp-for="Empleado.SegundoNombre" readonly>
+           
+        </div>
+        <div class="form-group col">
+            <label asp-for="Empleado.PrimerApellido"></label>
+            <input class="form-control" asp-for="Empleado.PrimerApellido" readonly>            
+        </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Eliminar</button>
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.SegundoApellido"></label>
+            <input class="form-control" asp-for="Empleado.SegundoApellido" readonly>            
+        </div>
+        <div class="form-group col">
+            <label asp-for="Empleado.Correo"></label>
+            <input class="form-control" type="email" asp-for="Empleado.Correo" readonly>          
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Empleado.Telefono"></label>
+            <input class="form-control" type="tel" asp-for="Empleado.Telefono" readonly>
+            
+        </div>
+        <div class="form-group col">
+            <Label asp-for="Empleado.IdCargoEmpleado"></Label>
+            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado" readonly>
+            
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="return confirm('¿Desea eliminar este registro?')">Eliminar</button>
+    <a class="btn btn-secondary" asp-page="./ListaEmpleado">Volver</a>
 </form>
