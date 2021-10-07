@@ -1,3 +1,4 @@
+using System.ComponentModel.Design;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,36 +13,40 @@ namespace NutriTic.App.Frontend.Pages
     public class LoginModel : PageModel
     {
         private readonly IRepositorioPaciente repositorioPaciente;
-        public Paciente Paciente{get;set;}
         private readonly IRepositorioEmpleado repositorioEmpleado;
+
+        Sesion sesion;
+
+        public Paciente Paciente{get;set;}
         public Empleado Empleado { get; set; }
 
-        public LoginModel(IRepositorioEmpleado repositorioEmpleado,IRepositorioPaciente repositorioPaciente){
+        public LoginModel(IRepositorioEmpleado repositorioEmpleado,
+                          IRepositorioPaciente repositorioPaciente){
             this.repositorioEmpleado=repositorioEmpleado;
             this.repositorioPaciente=repositorioPaciente;
         }
 
        
-
-        public IActionResult OnGet(String idUsuario,int rol)
+        /*        
+        public IActionResult OnGet()
         {
             
-            if(rol==1){
-               Empleado=repositorioEmpleado.GetOneEmpleado(idUsuario);
+            if("Empleado"){
+               Empleado=repositorioEmpleado.GetOneEmpleado(Sesion.GetSesion().IdUsuario);
                if(Empleado==null){
                    return RedirectToPage("./NotFound");
                }else{
-                   return Page();
+                   return RedirectToPage("/Empleado/Empleado");
                    
                } 
             }else{
-                Paciente= repositorioPaciente.GetOnePaciente(idUsuario);
+                Paciente= repositorioPaciente.GetOnePaciente(Sesion.GetSesion().IdUsuario);
                 if(Paciente==null){
                    return RedirectToPage("./NotFound");
                }else{
-                   return Page();
+                   return RedirectToPage("/Medidas/Medidas");
                } 
             }
-        }
+        }*/
     }
 }

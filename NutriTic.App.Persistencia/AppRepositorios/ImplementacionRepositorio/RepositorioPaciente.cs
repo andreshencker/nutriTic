@@ -40,6 +40,27 @@ namespace NutriTic.App.Persistencia
 
         }
 
+           Paciente IRepositorioPaciente.UpdatePaciente(Paciente paciente)
+        {
+            var PacienteEncontrado=_appContext.Paciente.FirstOrDefault(p => p.IdPaciente==paciente.IdPaciente);
+            if(PacienteEncontrado!=null){
+               PacienteEncontrado.PrimerNombre=paciente.PrimerNombre;
+               PacienteEncontrado.SegundoNombre=paciente.SegundoNombre;
+               PacienteEncontrado.PrimerApellido=paciente.PrimerApellido;
+               PacienteEncontrado.SegundoApellido=paciente.SegundoApellido;
+               PacienteEncontrado.FechaNacimiento=paciente.FechaNacimiento;
+               PacienteEncontrado.Correo=paciente.Correo;
+               PacienteEncontrado.Telefono=paciente.Telefono;
+               PacienteEncontrado.Estatura=paciente.Estatura;
+               PacienteEncontrado.Longitud=paciente.Longitud;
+               PacienteEncontrado.Latitud=paciente.Latitud;
+                
+                _appContext.SaveChanges();
+            }
+           
+            return PacienteEncontrado;
+        }
+
         
     }
 

@@ -34,5 +34,7 @@ namespace NutriTic.App.Persistencia
             _appContext.PacienteEmpleado.Remove(pacienteempleadoEncontrado);
             _appContext.SaveChanges(); 
         }
+
+     
     }
 }

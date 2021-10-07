@@ -27,6 +27,7 @@ namespace NutriTic.App.Frontend.Pages
             Empleado= new Empleado();
             CargoEmpleados=repositorioCargoEmpleado.GetAllCargoEmpleados();
         }
+        
         public IActionResult OnPost(Empleado empleado)
         {
             repositorioEmpleado.CreateEmpleado(empleado);

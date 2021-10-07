@@ -1,5 +1,6 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.LoginModel
+@using NutriTic.App.Dominio
 @{
 }
 <div class="container mt-5">
@@ -14,22 +15,20 @@
                 <div class="card card-body">
                 <form action="">
                 <h3 class="m-3 text-center">Ingresar</h3>
-                 <div class="form-group">
-                 <label for="">Tipo de usuario</label>    
-                 <select class="form-control" name="" id="">
-                    <option value="1">Empleado</option>
-                    <option value="2">Paciente</option>
-                 </select>   
+                <div class="form-group">
+                <label for="">Tipo de usuario</label>    
+                <select class="form-control" asp-items="Html.GetEnumSelectList<TipoUsuario>()" ></select>  
+                  
                 </div>               
                  <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Número Documento" required>
+                    <input class="form-control"  type="text" placeholder="Número Documento" required>
                 </div>               
                 <div class="form-group">
                     <a href="/Registro/Registro">No tienes cuenta?</a>
                 </div>
 
                 <div class="form-group">                          
-                    <button class="form-control btn btn-primary btn-block" type="submit" >Aceptar</button>           
+                    <button class="form-control btn btn-primary btn-block" type="submit" >Iniciar sesión</button>           
                 </div>               
             </form>
             </div>            

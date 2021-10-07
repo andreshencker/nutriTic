@@ -4,9 +4,10 @@ namespace NutriTic.App.Dominio
 {
     public class Sesion
     {
-        private static Sesion instance =null;
-        private string IdUsuario { get; set; }
-        private static object _lock = new object();
+         private static object _lock = new object();
+        private static Sesion instance;
+        public string IdUsuario { get; set; }
+       
 
         private Sesion()
         {

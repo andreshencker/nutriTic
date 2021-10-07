@@ -27,6 +27,19 @@ namespace NutriTic.App.Persistencia
             return medidaAdicionado.Entity;
         }
 
+        Medida IRepositorioMedidas.UpdateMedida(Medida medida)
+        {
+            var medidaEncontrado=_appContext.Medida.FirstOrDefault(p => p.IdMedida==medida.IdMedida);
+            if(medidaEncontrado!=null){
+                medidaEncontrado.Peso=medida.Peso;
+                medidaEncontrado.Fecha=medida.Fecha;
+                medidaEncontrado.IdPaciente=medida.IdPaciente;               
+                _appContext.SaveChanges();
+            }
+           
+            return medidaEncontrado;
+        }
+
         void IRepositorioMedidas.DeleteMedida(int idMedida)
         {
             var medidaEncontrado=_appContext.Medida.FirstOrDefault(p => p.IdMedida==idMedida);

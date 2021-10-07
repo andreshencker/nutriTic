@@ -25,5 +25,7 @@ namespace NutriTic.App.Frontend.Pages
            
 
         }
+
+        
     }
 }

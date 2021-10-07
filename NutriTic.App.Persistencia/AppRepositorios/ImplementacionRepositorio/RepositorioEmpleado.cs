@@ -55,5 +55,34 @@ namespace NutriTic.App.Persistencia
             return _appContext.Empleado.FirstOrDefault(p => p.IdEmpleado == idEmpleado);
 
         }
+        /*
+        IActionResult IRepositorioEmpleado.GetEmpleadoByCargo(int idCargoEmpleado)
+        {   
+            var resultado = _appContext.Empleado.Where(p => p.IdCargoEmpleado == idCargoEmpleado);
+            return resultado;
+            
+            List<Empleado> empleados=new List<Empleado>();
+            empleados.Add(_appContext.Empleado.Where(p => p.IdCargoEmpleado == idCargoEmpleado));
+            return empleados;
+            
+
+        }
+        
+        IEnumerable<Empleado> IRepositorioEmpleado.EmpleadosAsignados()
+        {
+            Random random = new Random();
+            List<Empleado> empleadosAsignados = new List<Empleado>();
+            List<Empleado> nutricionistas= IRepositorioEmpleado.GetEmpleadoByCargo(1);
+            List<Empleado> coaches= IRepositorioEmpleado.GetEmpleadoByCargo(2);           
+            Empleado nutricionista = nutricionistas[random.Next(0,nutricionistas.Count())];
+            Empleado coach=coaches[random.Next(0,coaches.Count())];
+            empleadosAsignados.Add(nutricionista);
+            empleadosAsignados.Add(coach);
+            return empleadosAsignados;
+
+        }
+        
+
+    */
     }
 }

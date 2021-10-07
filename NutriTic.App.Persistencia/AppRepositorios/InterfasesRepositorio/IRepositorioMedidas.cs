@@ -8,7 +8,7 @@ namespace NutriTic.App.Persistencia
         IEnumerable<Medida> GetAllMedidas();
         Medida GetOneMedida(int idMedida );
         Medida CreateMedida(Medida medida );
-        //Medida UpdateMedida(int idMedida ,Medida medida );
+        Medida UpdateMedida(Medida medida );
         void DeleteMedida(int idMedida);
     }
 }
