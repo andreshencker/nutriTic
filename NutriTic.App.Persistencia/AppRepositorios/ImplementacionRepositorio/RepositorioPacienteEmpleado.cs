@@ -35,6 +35,25 @@ namespace NutriTic.App.Persistencia
             _appContext.SaveChanges(); 
         }
 
-     
+    /*
+          IEnumerable<PacienteEmpleado> IRepositorioPacienteEmpleado.GetEmpleadosAsignados(string IdUsurio){            
+           
+            
+            Random random = new Random ();
+            List<PacienteEmpleado> pacienteEmpleados = new List<PacienteEmpleado>();
+            
+            var nutricionistas= _appContext.Empleado.Where(p => p.IdCargoEmpleado == 1);
+            var coaches= _appContext.Empleado.Where(p => p.IdCargoEmpleado == 2);
+            Empleado nutricionista=nutricionistas;
+            Empleado coach=coaches[random.Next(0,coaches.Count)];
+
+            var nutricionistaPaciente=new PacienteEmpleado(IdUsurio,nutricionistas.IdEmpleado);
+            var coachPaciente=new PacienteEmpleado(IdUsurio,coach.IdEmpleado);
+            pacienteEmpleados.Add(coachPaciente);
+            pacienteEmpleados.Add(nutricionistaPaciente);
+
+            return pacienteEmpleados;
+            
+        }*/
     }
 }

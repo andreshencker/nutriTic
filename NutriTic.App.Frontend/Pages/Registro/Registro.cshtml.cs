@@ -17,56 +17,44 @@ namespace NutriTic.App.Frontend.Pages
         private readonly IRepositorioPaciente repositorioPaciente;
         private readonly IRepositorioPacienteEmpleado repositorioPacienteEmpleado;
         private readonly IRepositorioEmpleado repositorioEmpleado;
-        public Paciente Paciente{get;set;}
-        public Empleado Empleado{get;set;}
-        public PacienteEmpleado pacienteEmpleado{get;set;}
+        public Paciente Paciente { get; set; }
 
-        
+        public PacienteEmpleado pacienteEmpleado { get; set; }
 
-        public RegistroModel( IRepositorioPaciente repositorioPaciente, 
-            IRepositorioPacienteEmpleado repositorioPacienteEmpleado,
-            IRepositorioEmpleado repositorioEmpleado){
-            this.repositorioPaciente=repositorioPaciente;
-            this.repositorioPacienteEmpleado=repositorioPacienteEmpleado;
-            this.repositorioEmpleado=repositorioEmpleado;
+
+
+        public RegistroModel(IRepositorioPaciente repositorioPaciente,
+            IRepositorioPacienteEmpleado repositorioPacienteEmpleado)
+        {
+            this.repositorioPaciente = repositorioPaciente;
+            this.repositorioPacienteEmpleado = repositorioPacienteEmpleado;
+
         }
         public IEnumerable<Paciente> Pacientes { get; set; }
-        public IEnumerable<Empleado> EmpleadosAsignados { get; set; }
+        public IEnumerable<PacienteEmpleado> EmpleadosAsignados { get; set; }
         public void OnGet()
-        {   
-           Paciente= new Paciente();
+        {
+            Paciente = new Paciente();
         }
         public IActionResult OnPost(Paciente paciente)
         {   //iniciando la sesión de usario
-            Sesion.Login(paciente.IdPaciente);
-            
-            //creando al paciente
-            repositorioPaciente.CreatePaciente(paciente);
-            //EmpleadosAsignados=repositorioEmpleado;
-           /* 
-            pacienteEmpleado.IdPaciente=id.paciente;
-            foreach(e in EmpleadosAsignados){
-               
-                //pacienteEmpleado.IdEmpleado=id.empleado;
-                pacienteEmpleado.IdEmpleado=e.IdEmpleado;
-                repositorioPacienteEmpleado.CreatePacienteEmpleado(pacienteEmpleado);
+            var a =Sesion.Instance;
+            if ( a!= null)
+            {
+                Sesion.Logout();
             }
-            
-            */
-          
-            
-
-            //consultar a los empleados
-            // asignar un nutricionista aleatoriamente
-            // asignar un coach aleatoriamente
-
-            
-            
-            
-            
-            return RedirectToPage("/Medidas/Medidas");
-            
            
+            Paciente = repositorioPaciente.GetOnePaciente(paciente.IdPaciente);
+            if (Paciente != null)
+            {
+                Sesion.Login(paciente.IdPaciente);
+                repositorioPaciente.CreatePaciente(paciente);
+                return RedirectToPage("/Medidas/Medidas");
+            }
+            else
+            {
+                return RedirectToPage("/Registro/registro");
+            }
         }
     }
 }

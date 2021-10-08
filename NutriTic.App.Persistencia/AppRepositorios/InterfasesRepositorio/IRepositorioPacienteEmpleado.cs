@@ -10,5 +10,7 @@ namespace NutriTic.App.Persistencia
         PacienteEmpleado CreatePacienteEmpleado(PacienteEmpleado Pacienteempleado );
         //PacienteEmpleado UpdatePacienteEmpleado(string idPacienteEmpleado,PacienteEmpleado Pacienteempleado );
         void DeletePacienteEmpleado(int idPacienteEmpleado);
+        
+        //IEnumerable<PacienteEmpleado> GetEmpleadosAsignados(string IdUsuario);
     }
 }

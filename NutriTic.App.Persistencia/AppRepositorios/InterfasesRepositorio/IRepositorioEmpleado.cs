@@ -10,8 +10,10 @@ namespace NutriTic.App.Persistencia
         Empleado UpdateEmpleado(Empleado empleado);
         void DeleteEmpleado(string idEmpleado);
 
-       //List<Empleado> GetEmpleadoByCargo(int idCargoEmpleado);
-       // IEnumerable<Empleado> EmpleadosAsignados();
+       IEnumerable<Empleado> GetEmpleadoByCargo(int idCargoEmpleado);
+       
+       
+
 
     }
 }

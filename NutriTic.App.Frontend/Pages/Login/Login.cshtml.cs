@@ -15,38 +15,65 @@ namespace NutriTic.App.Frontend.Pages
         private readonly IRepositorioPaciente repositorioPaciente;
         private readonly IRepositorioEmpleado repositorioEmpleado;
 
-        Sesion sesion;
+        public Sesion sesion { get; set; }
 
-        public Paciente Paciente{get;set;}
+        public Usuario Usuario { get; set; }
+
+        public Paciente Paciente { get; set; }
         public Empleado Empleado { get; set; }
+        public TipoUsuario TipoUsuario { get; set; }
 
         public LoginModel(IRepositorioEmpleado repositorioEmpleado,
-                          IRepositorioPaciente repositorioPaciente){
-            this.repositorioEmpleado=repositorioEmpleado;
-            this.repositorioPaciente=repositorioPaciente;
+                          IRepositorioPaciente repositorioPaciente)
+        {
+            this.repositorioEmpleado = repositorioEmpleado;
+            this.repositorioPaciente = repositorioPaciente;
         }
 
-       
-        /*        
-        public IActionResult OnGet()
+
+
+        public IActionResult OnPost(Usuario usuario)
         {
-            
-            if("Empleado"){
-               Empleado=repositorioEmpleado.GetOneEmpleado(Sesion.GetSesion().IdUsuario);
-               if(Empleado==null){
-                   return RedirectToPage("./NotFound");
-               }else{
-                   return RedirectToPage("/Empleado/Empleado");
-                   
-               } 
-            }else{
-                Paciente= repositorioPaciente.GetOnePaciente(Sesion.GetSesion().IdUsuario);
-                if(Paciente==null){
-                   return RedirectToPage("./NotFound");
-               }else{
-                   return RedirectToPage("/Medidas/Medidas");
-               } 
+            var a =Sesion.Instance;
+            if ( a!= null)
+            {
+                Sesion.Logout();
             }
-        }*/
+
+                       
+            if (usuario.TipoUsuario == TipoUsuario.Empleado)
+            {   
+                
+                Empleado = repositorioEmpleado.GetOneEmpleado(usuario.IdUsuario);
+                if (Empleado == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    Sesion.Login(usuario.IdUsuario); 
+                    return RedirectToPage("/Empleado/Empleado");
+
+                }
+            }
+            else if (usuario.TipoUsuario == TipoUsuario.Paciente)
+            {
+                Paciente = repositorioPaciente.GetOnePaciente(usuario.IdUsuario);
+                if (Paciente == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    Sesion.Login(usuario.IdUsuario); 
+                    return RedirectToPage("/Medidas/Medidas");
+                }
+               
+            }
+            else{
+                return NotFound();
+                }
+             
+        }
     }
 }

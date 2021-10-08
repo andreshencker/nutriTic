@@ -25,7 +25,7 @@ namespace NutriTic.App.Frontend.Pages
         public IActionResult OnPost(Medida medida)
         {
             medida.Fecha=DateTime.Now;
-            medida.IdPaciente="1";
+            medida.IdPaciente= Sesion.GetSesion().IdUsuario;
             repositorioMedida.CreateMedida(medida);
             return RedirectToPage("./Medidas");
         }

@@ -1,71 +1,65 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.ProfileEmpleadoModel
 @{
-    Layout="_LayoutEmpleado";
+    Layout = "_LayoutEmpleado";
 }
 
 <div class="content mt-5">
-
     <div class="card card-body">
         <h2>Datos del Empleado</h2>
         <form action="" method="post">
             <div class="row">
-        <div class="form-group col">
-            <label asp-for="Empleado.IdEmpleado"></label>
-            <input class="form-control" asp-for="Empleado.IdEmpleado" readonly>
-            <span asp-validation-for="Empleado.IdEmpleado" class="text-danger"></span>
-        </div>
-        <div class="form-group col">
-            <label asp-for="Empleado.PrimerNombre"></label>
-            <input class="form-control" asp-for="Empleado.PrimerNombre">
-            <span asp-validation-for="Empleado.PrimerNombre" class="text-danger"></span>
-        </div>
-    </div>
+                <div class="form-group col">
+                    <label asp-for="Empleado.IdEmpleado"></label>
+                    <input class="form-control" asp-for="Empleado.IdEmpleado" readonly>
+                    <span asp-validation-for="Empleado.IdEmpleado" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="Empleado.PrimerNombre"></label>
+                    <input class="form-control" asp-for="Empleado.PrimerNombre">
+                    <span asp-validation-for="Empleado.PrimerNombre" class="text-danger"></span>
+                </div>
+            </div>
 
 
-    <div class="row">
-        <div class="form-group col">
-            <label asp-for="Empleado.SegundoNombre"></label>
-            <input class="form-control" asp-for="Empleado.SegundoNombre">
-            <span asp-validation-for="Empleado.SegundoNombre" class="text-danger"></span>
-        </div>
-        <div class="form-group col">
-            <label asp-for="Empleado.PrimerApellido"></label>
-            <input class="form-control" asp-for="Empleado.PrimerApellido" required>
-            <span asp-validation-for="Empleado.PrimerApellido" class="text-danger"></span>
-        </div>
-    </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Empleado.SegundoNombre"></label>
+                    <input class="form-control" asp-for="Empleado.SegundoNombre">
+                    <span asp-validation-for="Empleado.SegundoNombre" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="Empleado.PrimerApellido"></label>
+                    <input class="form-control" asp-for="Empleado.PrimerApellido" required>
+                    <span asp-validation-for="Empleado.PrimerApellido" class="text-danger"></span>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="form-group col">
-            <label asp-for="Empleado.SegundoApellido"></label>
-            <input class="form-control" asp-for="Empleado.SegundoApellido" required>
-            <span asp-validation-for="Empleado.SegundoApellido" class="text-danger"></span>
-        </div>
-        <div class="form-group col">
-            <label asp-for="Empleado.Correo"></label>
-            <input class="form-control" type="email" asp-for="Empleado.Correo" readonly>
-            <span asp-validation-for="Empleado.Correo" ></span>
-        </div>
-    </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Empleado.SegundoApellido"></label>
+                    <input class="form-control" asp-for="Empleado.SegundoApellido" required>
+                    <span asp-validation-for="Empleado.SegundoApellido" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="Empleado.Correo"></label>
+                    <input class="form-control" type="email" asp-for="Empleado.Correo" readonly>
+                    <span asp-validation-for="Empleado.Correo"></span>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="form-group col">
-            <label asp-for="Empleado.Telefono"></label>
-            <input class="form-control" type="tel" asp-for="Empleado.Telefono" required>
-            <span asp-validation-for="Empleado.Telefono"></span>
-        </div>
-        <div class="form-group col">
-            <Label asp-for="Empleado.IdCargoEmpleado"></Label>
-            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado"  readonly>
-            <span asp-validation-for="Empleado.IdCargoEmpleado" class="text-danger"></span>
-        </div>
-    </div>
-
-
-
-            
-
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Empleado.Telefono"></label>
+                    <input class="form-control" type="tel" asp-for="Empleado.Telefono" required>
+                    <span asp-validation-for="Empleado.Telefono"></span>
+                </div>
+                <div class="form-group col">
+                    <Label asp-for="Empleado.IdCargoEmpleado"></Label>
+                    <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado" readonly>
+                    <span asp-validation-for="Empleado.IdCargoEmpleado" class="text-danger"></span>
+                </div>
+            </div>
             <div class="form-group">
                 <button class="form-control btn btn-primary btn-block" type="submit">Actualizar</button>
             </div>

@@ -25,5 +25,9 @@ namespace NutriTic.App.Dominio
             this.IdEmpleado=IdEmpleado;
             this.IdPaciente=IdPaciente;
         }
+
+     
     }
+
+    
 }
