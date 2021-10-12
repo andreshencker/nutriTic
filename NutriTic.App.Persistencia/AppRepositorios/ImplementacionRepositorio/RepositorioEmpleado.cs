@@ -1,5 +1,7 @@
+using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using NutriTic.App.Dominio;
 
@@ -44,12 +46,48 @@ namespace NutriTic.App.Persistencia
             _appContext.Empleado.Remove(empleadoEncontrado);
             _appContext.SaveChanges(); 
         }
+    IEnumerable<Empleado> IRepositorioEmpleado.GetAllEmpleados(){
+            return _appContext.Empleado;
+    }
 
-        IEnumerable<Empleado> IRepositorioEmpleado.GetAllEmpleados()
+        IEnumerable<VEmpleado> IRepositorioEmpleado.GetAllVEmpleados()
         {
-            return _appContext.Empleado.ToList();
+
+            IEnumerable<VEmpleado> vEmpleados = (from e in _appContext.Empleado 
+                     join ce in _appContext.CargoEmpleado
+                    on e.IdCargoEmpleado equals ce.IdCargoEmpleado
+                    select new VEmpleado() {
+                        IdEmpleado= e.IdEmpleado,
+                        PrimerNombre=e.PrimerNombre,
+                        SegundoNombre= e.SegundoNombre,
+                        PrimerApellido=e.PrimerApellido,
+                        SegundoApellido=e.SegundoApellido,
+                        Correo=e.Correo,
+                        Telefono=e.Telefono,
+                        NombreCargo=ce.NombreCargo,
+                        NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
+                        IdNombreCompleto=e.IdEmpleado+" "+e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido}).ToList();
+            return vEmpleados;
+             
         }
 
+         IEnumerable<VEmpleado> IRepositorioEmpleado.GetOneVEmpleado(string idEmpleado)
+        {
+           IEnumerable<VEmpleado> vEmpleados = (from e in _appContext.Empleado 
+                    join ce in _appContext.CargoEmpleado
+                    on e.IdCargoEmpleado equals ce.IdCargoEmpleado
+                    where e.IdEmpleado==idEmpleado
+                    select new VEmpleado() {
+                        IdEmpleado= e.IdEmpleado,
+                        PrimerNombre=e.PrimerNombre,
+                        SegundoNombre= e.SegundoNombre,
+                        PrimerApellido=e.PrimerApellido,
+                        SegundoApellido=e.SegundoApellido,
+                        Correo=e.Correo,
+                        Telefono=e.Telefono,
+                        NombreCargo=ce.NombreCargo}).ToList();
+            return vEmpleados;
+        }
         Empleado IRepositorioEmpleado.GetOneEmpleado(string idEmpleado)
         {
             return _appContext.Empleado.FirstOrDefault(p => p.IdEmpleado == idEmpleado);

@@ -29,6 +29,23 @@ namespace NutriTic.App.Persistencia
             _appContext.SaveChanges(); 
         }
 
+        IEnumerable<VPaciente> IRepositorioPaciente.GetAllVPacientes()
+        {
+             IEnumerable<VPaciente> vPaciente = (
+                        from e in _appContext.Paciente                                             
+                        select new VPaciente() {
+                        IdPaciente= e.IdPaciente,
+                        PrimerNombre=e.PrimerNombre,
+                        SegundoNombre= e.SegundoNombre,
+                        PrimerApellido=e.PrimerApellido,
+                        SegundoApellido=e.SegundoApellido,
+                        Correo=e.Correo,
+                        Telefono=e.Telefono,
+                        Estatuta=e.Estatura,
+                        NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
+                        IdNombreCompleto=e.IdPaciente+" "+ e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido }).ToList();
+            return vPaciente;
+        }
         IEnumerable<Paciente> IRepositorioPaciente.GetAllPacientes()
         {
             return _appContext.Paciente;

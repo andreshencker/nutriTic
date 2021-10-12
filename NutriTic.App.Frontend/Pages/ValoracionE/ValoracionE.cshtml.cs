@@ -1,3 +1,4 @@
+using System.Reflection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,20 +17,28 @@ namespace NutriTic.App.Frontend.Pages
         private readonly IRepositorioEmpleado repositorioEmpleado;
          private readonly IRepositorioMedidas repositorioMedida; 
         private readonly IRepositorioPaciente repositorioPaciente;
+        private readonly IRepositorioValoracion repositorioValoracion;
 
-         public IEnumerable<Medida> Medidas{get;set;} 
+        public IEnumerable<VMedida> Medidas{get;set;}
+        public IEnumerable<VPaciente> Pacientes{get;set;}
+        public IEnumerable<VValoracion> Valoraciones{get;set;}
         public ValoracionEModel(IRepositorioEmpleado repositorioEmpleado,
                                 IRepositorioPaciente repositorioPaciente,
-                                IRepositorioMedidas repositorioMedida){
+                                IRepositorioMedidas repositorioMedida,
+                                IRepositorioValoracion repositorioValoracion){
             this.repositorioEmpleado=repositorioEmpleado;
             this.repositorioPaciente=repositorioPaciente;
-            this.repositorioMedida=repositorioMedida;                           
+            this.repositorioMedida=repositorioMedida; 
+            this.repositorioValoracion=repositorioValoracion;                          
         }       
 
         public void OnGet()
         {
-            Medidas=repositorioMedida.GetAllMedidas();
-            Paciente=repositorioPaciente.GetOnePaciente("1");
+
+            Pacientes=repositorioPaciente.GetAllVPacientes();
+            Paciente=repositorioPaciente.GetOnePaciente("1037");
+            Medidas=repositorioMedida.GetAllMedidasByPaciente("1037");
+            Valoraciones=repositorioValoracion.GetAllValoracionesByPacienteAndEmpleado("1037",Sesion.GetSesion().IdUsuario);
         }
     }
 }

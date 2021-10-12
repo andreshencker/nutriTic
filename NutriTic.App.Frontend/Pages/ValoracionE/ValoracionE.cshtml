@@ -1,77 +1,87 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.ValoracionEModel
+@using NutriTic.App.Dominio
 @{
     Layout = "_LayoutEmpleado";
-   
+
 }
- <div class="content mt-5">
+<div class="content mt-5">
+
+    <div class="card card-body mt-3">
+        <h2>Información del Paciente</h2>
+        <form action="">
+            <div class="row mt-2">
+                <div class="form-group col">
+                    <Label>Paciente</Label>
+                    <Select class="form-control"
+                        asp-items="@(new  SelectList(Model.Pacientes,"IdPaciente","IdNombreCompleto"))">
+                    </Select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Paciente.Correo"></label>
+                    <input class="form-control" asp-for="Paciente.Correo" type="email" readonly>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="Paciente.Telefono"></label>
+                    <input class="form-control" asp-for="Paciente.Telefono" type="text" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Paciente.FechaNacimiento"></label>
+                    <input class="form-control" asp-for="Paciente.FechaNacimiento" type="text" readonly>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="Paciente.Estatura"></label>
+                    <input class="form-control" asp-for="Paciente.Estatura" type="text" readonly>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card card-body mt-3">
 
         <div class="card card-body mt-3">
-            <h2>Información del Paciente</h2>
-            <form action="">
-                <div class="row mt-2">
-                     <div class="form-group col">
-                        <label >Paciente</label>
-                        <select class="form-control"></select>
-                    </div>
-                </div>
-              
-                <div class="row">
-                    <div class="form-group col">
-                        <label asp-for="Paciente.Correo"></label>
-                        <input class="form-control" asp-for="Paciente.Correo" type="email" readonly>
-                    </div>
-                    <div class="form-group col">
-                        <label asp-for="Paciente.Telefono"></label>
-                        <input class="form-control" asp-for="Paciente.Telefono" type="text" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col">
-                        <label asp-for="Paciente.FechaNacimiento"></label>
-                        <input class="form-control" asp-for="Paciente.Telefono" type="text" readonly>
-                    </div>
-                    <div class="form-group col">
-                        <label asp-for="Paciente.Estatura"></label>
-                        <input class="form-control" asp-for="Paciente.Estatura" type="text" readonly>
-                    </div>
-                </div>
-            </form>
+            <h3>Historial de medidas</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id Medida</th>
+                        <th>Fecha Medida</th>
+                        <th>Peso</th>
+                        <th>IMC</th>
+                        <th>Variacion IMC</th>
+                        <th>Acción</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var e in Model.Medidas)
+                    {
+
+                        <tr>
+                            <td>@e.IdMedida</td>
+                            <td>@e.FechaMedida</td>
+                            <td>@e.Peso</td>
+                            <td>@e.Peso</td>
+                            <td>@e.Peso</td>
+                            <td><a class="btn btn-outline-primary" asp-page="/ValoracionE/CrearValoracion"
+                                asp-route-id="@e.IdMedida">Crear Valoración</a></td>
+
+
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
         </div>
         <div class="card card-body mt-3">
-            <div>
-                <a class="btn btn-primary mt-2" asp-page="./CrearValoracion">Crear Valoración</a>
-            </div>
-            <div class="card card-body mt-3">
-                <h3>Historial de medidas</h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Id Medida</th>
-                            <th>Fecha Medida</th>
-                            <th>Peso</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var e in Model.Medidas)
-                        {
-                            <tr>
-                                <td>@e.IdMedida</td>
-                                <td>@e.Fecha</td>
-                                <td>@e.Peso</td>
-                                <td></td>
-
-
-                            </tr>
-                        }
-                    </tbody>
-
-
-                </table>
-            </div>
-            <div class="card card-body mt-3">
-                <h3>Historial de valoraciones</h3>
-                <table class="table">
+            <h3>Historial de valoraciones</h3>
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Id Medida</th>
                         <th>Fecha valoración</th>
@@ -80,9 +90,30 @@
                         <th>Cargo</th>
                         <th>Acciones</th>
                     </tr>
-                </table>
-            </div>
+                </thead>
+                <tbody>
+                    @foreach (var e in Model.Valoraciones)
+                    {
+
+                        <tr>
+                            <td>@e.IdMedida</td>
+                            <td>@e.FechaValoracion</td>
+                            <td>@e.Comentario</td>
+                            <td>@e.NombreCompleto</td>
+                            <td>@e.NombreCargo</td>
+                            <td>                               
+                                <a class="btn btn-outline-secondary" asp-page="./ActualizarValoracion" asp-route-id="@e.IdValoracion">Actualizar</a>
+                                <a class="btn btn-outline-danger" asp-page="./EliminarValoracion" asp-route-id="@e.IdValoracion">Eliminar</a>
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
         </div>
-
-
     </div>
+
+
+</div>

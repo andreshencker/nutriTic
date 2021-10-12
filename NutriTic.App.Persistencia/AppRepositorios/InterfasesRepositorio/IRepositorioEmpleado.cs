@@ -5,7 +5,9 @@ namespace NutriTic.App.Persistencia
     public interface IRepositorioEmpleado
     {
         IEnumerable<Empleado> GetAllEmpleados();
+        IEnumerable<VEmpleado> GetAllVEmpleados();
         Empleado GetOneEmpleado(string idEmpleado );
+        IEnumerable<VEmpleado> GetOneVEmpleado(string idEmpleado );
         Empleado CreateEmpleado(Empleado empleado );
         Empleado UpdateEmpleado(Empleado empleado);
         void DeleteEmpleado(string idEmpleado);

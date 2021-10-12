@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NutriTic.App.Persistencia;
 
 namespace NutriTic.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20211011163413_Entidades")]
+    partial class Entidades
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,8 +89,8 @@ namespace NutriTic.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(15)");
 
-                    b.Property<double>("Peso")
-                        .HasColumnType("float");
+                    b.Property<int>("Peso")
+                        .HasColumnType("int");
 
                     b.HasKey("IdMedida");
 

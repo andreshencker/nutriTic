@@ -52,8 +52,14 @@ namespace NutriTic.App.Frontend.Pages
                 else
                 {
                     Sesion.Login(usuario.IdUsuario); 
-                    return RedirectToPage("/Empleado/Empleado");
+                    if(Empleado.IdCargoEmpleado==3){
+                        return RedirectToPage("/Empleado/ListaEmpleado");
 
+                    }else{
+                        return RedirectToPage("/ValoracionE/ValoracionE");
+
+                    }
+                   
                 }
             }
             else if (usuario.TipoUsuario == TipoUsuario.Paciente)

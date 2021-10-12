@@ -1,7 +1,7 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.EmpleadoModel
 @{
-     Layout="_LayoutEmpleado";
+     Layout="_LayoutEmpleadoAdmin";
 }
 <h1>Nuevo Empleado</h1>
 <form method="post">
@@ -54,7 +54,8 @@
         </div>
         <div class="form-group col">
             <Label asp-for="Empleado.IdCargoEmpleado"></Label>
-            <input class="form-control" type="text" asp-for="Empleado.IdCargoEmpleado"  required>
+           <Select asp-for="Empleado.IdCargoEmpleado" class="form-control" asp-items="@(new  SelectList(Model.CargoEmpleados,"IdCargoEmpleado","NombreCargo"))">             
+           </Select>            
             <span asp-validation-for="Empleado.IdCargoEmpleado" class="text-danger"></span>
         </div>
     </div>

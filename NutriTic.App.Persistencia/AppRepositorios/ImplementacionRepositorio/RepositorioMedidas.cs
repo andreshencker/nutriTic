@@ -13,6 +13,24 @@ namespace NutriTic.App.Persistencia
         {
             return _appContext.Medida;
         }
+        
+        IEnumerable<VMedida> IRepositorioMedidas.GetAllMedidasByPaciente(string idPaciente)
+        {
+           IEnumerable<VMedida> vMedidas= ( from m in _appContext.Medida
+                                            join p in _appContext.Paciente 
+                                            on m.IdPaciente equals p.IdPaciente
+                                            where m.IdPaciente==idPaciente    
+                                            select new VMedida(){
+                                             IdMedida = m.IdMedida,
+                                             Peso = m.Peso,
+                                             IdPaciente=m.IdPaciente,
+                                             FechaMedida = m.Fecha,
+                                             Estatura=p.Estatura                                            
+                                            }).ToList();
+
+          
+            return vMedidas;
+        }
 
          Medida IRepositorioMedidas.GetOneMedida(int idMedida)
         {

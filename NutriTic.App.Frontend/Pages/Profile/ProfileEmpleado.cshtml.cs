@@ -19,7 +19,7 @@ namespace NutriTic.App.Frontend.Pages
         }        
         public IActionResult OnGet()
         {
-            Empleado=repositorioEmpleado.GetOneEmpleado("1");
+            Empleado=repositorioEmpleado.GetOneEmpleado(Sesion.GetSesion().IdUsuario);
             if(Empleado==null){
                 return NotFound();
             }

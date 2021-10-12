@@ -6,15 +6,16 @@
     <form action="" method="POST">
         <h3>Generar valoraciones</h3>
         <div class="form-group">
-            <label ></label>
-            <input class="form-control" name="valoracion" type="text" placeholder="Valoración" required>
+            <label asp-for="Valoracion.IdMedida"></label>
+            <input class="form-control" asp-for="Valoracion.IdMedida" type="text" required>
         </div>       
         <div class="form-group">
-            <textarea class="form-control" name="comentarios" rows="10"
-                cols="40">Escribe aquí tus comentarios</textarea>
+            <label asp-for="Valoracion.comentario"></label>
+            <textarea class="form-control" asp-for="Valoracion.comentario" rows="10" cols="40"></textarea>
         </div>
         <div class="form-group">
-            <button class="form-control btn btn-primary btn-block" type="submit">Aceptar</button>
-        </div>
+                    <button class="btn btn-primary" type="submit">Aceptar</button>
+                    <a class="btn btn-secondary" asp-page="./ValoracionE">Volver</a>
+                </div>
     </form>
 </div>

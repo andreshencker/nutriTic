@@ -7,6 +7,7 @@ namespace NutriTic.App.Persistencia
     {
         
         IEnumerable<Paciente> GetAllPacientes();
+        IEnumerable<VPaciente> GetAllVPacientes();
         Paciente GetOnePaciente(string idPaciente );
         Paciente CreatePaciente(Paciente paciente );
         Paciente UpdatePaciente(Paciente paciente );

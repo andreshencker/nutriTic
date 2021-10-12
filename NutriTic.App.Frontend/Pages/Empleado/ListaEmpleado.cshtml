@@ -1,7 +1,7 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.ListaEmpleadoModel
 @{
-     Layout="_LayoutEmpleado";
+     Layout="_LayoutEmpleadoAdmin";
 }
 <a class="btn btn-primary mt-5" asp-page="/Empleado/Empleado">Crear Nuevo Empleado</a>
 <div class="card card-body mt-3">
@@ -27,7 +27,7 @@
                     <td>@e.PrimerNombre @e.SegundoNombre @e.PrimerApellido @e.SegundoApellido </td>
                     <td>@e.Correo</td>
                     <td>@e.Telefono</td>
-                    <td>@e.IdCargoEmpleado</td>                         
+                    <td>@e.NombreCargo</td>                         
                     <td>
                         <a class="btn btn-outline-primary" asp-page="./ActualizarEmpleado" asp-route-id="@e.IdEmpleado">Editar</a>
                         <a class="btn btn-outline-danger"  asp-page="./EliminarEmpleado" asp-route-id="@e.IdEmpleado">Eliminar</a>

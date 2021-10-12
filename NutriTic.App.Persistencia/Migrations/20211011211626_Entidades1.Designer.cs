@@ -10,8 +10,8 @@ using NutriTic.App.Persistencia;
 namespace NutriTic.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211004235725_Entidades")]
-    partial class Entidades
+    [Migration("20211011211626_Entidades1")]
+    partial class Entidades1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,7 +34,7 @@ namespace NutriTic.App.Persistencia.Migrations
 
                     b.HasKey("IdCargoEmpleado");
 
-                    b.ToTable("Cargo_Empleado");
+                    b.ToTable("CargoEmpleado");
                 });
 
             modelBuilder.Entity("NutriTic.App.Dominio.Empleado", b =>
@@ -89,8 +89,8 @@ namespace NutriTic.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(15)");
 
-                    b.Property<int>("Peso")
-                        .HasColumnType("int");
+                    b.Property<double>("Peso")
+                        .HasColumnType("float");
 
                     b.HasKey("IdMedida");
 

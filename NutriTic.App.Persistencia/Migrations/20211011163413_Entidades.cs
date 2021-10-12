@@ -8,7 +8,7 @@ namespace NutriTic.App.Persistencia.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Cargo_Empleado",
+                name: "CargoEmpleado",
                 columns: table => new
                 {
                     IdCargoEmpleado = table.Column<int>(type: "int", nullable: false)
@@ -17,7 +17,7 @@ namespace NutriTic.App.Persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cargo_Empleado", x => x.IdCargoEmpleado);
+                    table.PrimaryKey("PK_CargoEmpleado", x => x.IdCargoEmpleado);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,9 +58,9 @@ namespace NutriTic.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_Empleado", x => x.IdEmpleado);
                     table.ForeignKey(
-                        name: "FK_Empleado_Cargo_Empleado_IdCargoEmpleado",
+                        name: "FK_Empleado_CargoEmpleado_IdCargoEmpleado",
                         column: x => x.IdCargoEmpleado,
-                        principalTable: "Cargo_Empleado",
+                        principalTable: "CargoEmpleado",
                         principalColumn: "IdCargoEmpleado",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -186,7 +186,7 @@ namespace NutriTic.App.Persistencia.Migrations
                 name: "Medida");
 
             migrationBuilder.DropTable(
-                name: "Cargo_Empleado");
+                name: "CargoEmpleado");
 
             migrationBuilder.DropTable(
                 name: "Paciente");

@@ -12,7 +12,7 @@ namespace NutriTic.App.Frontend.Pages
     public class ListaEmpleadoModel : PageModel
     {
         private readonly IRepositorioEmpleado repositorioEmpleado;       
-        public IEnumerable<Empleado> Empleados{get;set;}      
+        public IEnumerable<VEmpleado> Empleados{get;set;}      
 
         public ListaEmpleadoModel(IRepositorioEmpleado repositorioEmpleado ){
              this.repositorioEmpleado = repositorioEmpleado;         
@@ -21,7 +21,7 @@ namespace NutriTic.App.Frontend.Pages
         public void OnGet()
         {   
             
-            Empleados=repositorioEmpleado.GetAllEmpleados();
+            Empleados=repositorioEmpleado.GetAllVEmpleados();
            
 
         }

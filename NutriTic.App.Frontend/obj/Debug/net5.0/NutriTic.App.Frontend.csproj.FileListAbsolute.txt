@@ -345,3 +345,5 @@ E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\
 E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\ValoracionE\CrearValoracion.cshtml.g.cs
 E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\ValoracionE\EliminarValoracion.cshtml.g.cs
 E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Colsultas\Consultas.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Colsultas\Consultas.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutEmpleadoAdmin.cshtml.g.cs

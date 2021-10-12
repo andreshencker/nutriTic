@@ -45,7 +45,7 @@ namespace NutriTic.App.Frontend.Pages
             }
            
             Paciente = repositorioPaciente.GetOnePaciente(paciente.IdPaciente);
-            if (Paciente != null)
+            if (Paciente == null)
             {
                 Sesion.Login(paciente.IdPaciente);
                 repositorioPaciente.CreatePaciente(paciente);

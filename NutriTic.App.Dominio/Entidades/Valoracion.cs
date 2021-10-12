@@ -21,6 +21,7 @@ namespace NutriTic.App.Dominio
         public string IdEmpleado { get; set; }
         
         [Required]
+        [Display(Name="Id Medida")]
         public int IdMedida { get; set; }
         
         [ForeignKey("IdMedida")]

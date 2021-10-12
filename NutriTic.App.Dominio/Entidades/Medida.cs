@@ -15,7 +15,7 @@ namespace NutriTic.App.Dominio
 
         [Required(ErrorMessage="Ingrese su peso")]
         [Display(Name="Peso")]
-        public int Peso {get;set;}
+        public double Peso {get;set;}
 
         [Column(TypeName="varchar(15)")] 
         [Required] 

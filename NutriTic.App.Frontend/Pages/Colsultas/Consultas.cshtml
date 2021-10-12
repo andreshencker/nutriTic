@@ -1,29 +1,57 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.ConsultasModel
 @{
-    Layout="_LayoutEmpleado";
+    Layout = "_LayoutEmpleado";
 }
 
 <div>
     <h3>Empleados segun el cargo</h3>
-    
+
     <table class="table">
         <thead>
-            <tr>                
+            <tr>
                 <th>Id Empleado</th>
                 <th>Id Cargo</th>
-                
+
             </tr>
         </thead>
         <tbody>
             @foreach (var e in Model.Empleados)
-                        {
-                            <tr>
-                                <td>@e.IdEmpleado</td>   
-                                <td>@e.IdCargoEmpleado</td>
-                           </tr>
-                        }
+            {
+                <tr>
+                    <td>@e.IdEmpleado</td>
+                    <td>@e.IdCargoEmpleado</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
+<div>
+    <h3>cargo Empleado</h3>
+     <div class="form-group col">
+            <Label ></Label>
+           <Select asp-items="@(new  SelectList(Model.CargoEmpleados,"IdCargoEmpleado","NombreCargo"))">
+               <option value="">Seleccione</option>
+           </Select>            
+            <span asp-validation-for="Empleado.IdCargoEmpleado" class="text-danger"></span>
+        </div>
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id cargo</th>
+                <th>nombre Cargo</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model.CargoEmpleados)
+            {
+                <tr>
+                    <td>@e.IdCargoEmpleado</td>
+                    <td>@e.NombreCargo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
