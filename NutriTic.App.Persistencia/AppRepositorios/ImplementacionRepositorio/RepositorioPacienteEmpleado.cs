@@ -35,25 +35,25 @@ namespace NutriTic.App.Persistencia
             _appContext.SaveChanges(); 
         }
 
-    /*
-          IEnumerable<PacienteEmpleado> IRepositorioPacienteEmpleado.GetEmpleadosAsignados(string IdUsurio){            
+    
+          IEnumerable<PacienteEmpleado> IRepositorioPacienteEmpleado.GetEmpleadosAsignados(string IdPaciente){            
            
             
             Random random = new Random ();
             List<PacienteEmpleado> pacienteEmpleados = new List<PacienteEmpleado>();
             
-            var nutricionistas= _appContext.Empleado.Where(p => p.IdCargoEmpleado == 1);
-            var coaches= _appContext.Empleado.Where(p => p.IdCargoEmpleado == 2);
-            Empleado nutricionista=nutricionistas;
-            Empleado coach=coaches[random.Next(0,coaches.Count)];
+            var nutricionistas= _appContext.Empleado.Where(p => p.IdCargoEmpleado == 1).ToList();
+            var coaches= _appContext.Empleado.Where(p => p.IdCargoEmpleado == 2).ToList();
+            Empleado nutricionista=nutricionistas[random.Next(0,nutricionistas.Count())];
+            Empleado coach=coaches[random.Next(0,coaches.Count())];
 
-            var nutricionistaPaciente=new PacienteEmpleado(IdUsurio,nutricionistas.IdEmpleado);
-            var coachPaciente=new PacienteEmpleado(IdUsurio,coach.IdEmpleado);
+            PacienteEmpleado nutricionistaPaciente=new PacienteEmpleado(IdPaciente,nutricionista.IdEmpleado);
+            PacienteEmpleado coachPaciente=new PacienteEmpleado(IdPaciente,coach.IdEmpleado);
             pacienteEmpleados.Add(coachPaciente);
             pacienteEmpleados.Add(nutricionistaPaciente);
 
             return pacienteEmpleados;
             
-        }*/
+        }
     }
 }

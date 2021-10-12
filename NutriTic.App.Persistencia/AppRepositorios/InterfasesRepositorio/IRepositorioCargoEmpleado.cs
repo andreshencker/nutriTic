@@ -8,7 +8,7 @@ namespace NutriTic.App.Persistencia
         IEnumerable<CargoEmpleado> GetAllCargoEmpleados();
         CargoEmpleado GetOneCargoEmpleado(int idCargoEmpleado );
         CargoEmpleado CreateCargoEmpleado(CargoEmpleado Cargoempleado );
-        //CargoEmpleado UpdateCargoEmpleado(string idCargoEmpleado,CargoEmpleado Cargoempleado);
+        CargoEmpleado UpdateCargoEmpleado(CargoEmpleado Cargoempleado);
         void DeleteCargoEmpleado(int idCargoEmpleado);
     }
 }

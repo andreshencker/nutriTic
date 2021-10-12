@@ -1,3 +1,4 @@
+using System.Security.Permissions;
 using System.ComponentModel;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace NutriTic.App.Frontend.Pages
         private readonly IRepositorioPaciente repositorioPaciente;
         private readonly IRepositorioPacienteEmpleado repositorioPacienteEmpleado;
         private readonly IRepositorioEmpleado repositorioEmpleado;
+        
         public Paciente Paciente { get; set; }
 
         public PacienteEmpleado pacienteEmpleado { get; set; }
@@ -24,10 +26,12 @@ namespace NutriTic.App.Frontend.Pages
 
 
         public RegistroModel(IRepositorioPaciente repositorioPaciente,
-            IRepositorioPacienteEmpleado repositorioPacienteEmpleado)
+            IRepositorioPacienteEmpleado repositorioPacienteEmpleado,
+            IRepositorioEmpleado repositorioEmpleado)
         {
             this.repositorioPaciente = repositorioPaciente;
             this.repositorioPacienteEmpleado = repositorioPacienteEmpleado;
+            this.repositorioEmpleado=repositorioEmpleado;
 
         }
         public IEnumerable<Paciente> Pacientes { get; set; }
@@ -35,6 +39,7 @@ namespace NutriTic.App.Frontend.Pages
         public void OnGet()
         {
             Paciente = new Paciente();
+            //pacienteEmpleado= new PacienteEmpleado();
         }
         public IActionResult OnPost(Paciente paciente)
         {   //iniciando la sesión de usario
@@ -47,8 +52,12 @@ namespace NutriTic.App.Frontend.Pages
             Paciente = repositorioPaciente.GetOnePaciente(paciente.IdPaciente);
             if (Paciente == null)
             {
-                Sesion.Login(paciente.IdPaciente);
+                Sesion.Login(paciente.IdPaciente);                     
+                EmpleadosAsignados=repositorioPacienteEmpleado.GetEmpleadosAsignados(Sesion.GetSesion().IdUsuario);
                 repositorioPaciente.CreatePaciente(paciente);
+                foreach(PacienteEmpleado pacienteEmpleado in EmpleadosAsignados){
+                    repositorioPacienteEmpleado.CreatePacienteEmpleado(pacienteEmpleado);                }
+               
                 return RedirectToPage("/Medidas/Medidas");
             }
             else

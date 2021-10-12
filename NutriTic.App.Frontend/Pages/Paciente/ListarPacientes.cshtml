@@ -1,0 +1,44 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.ListarPacientesModel
+@{
+    Layout="_LayoutEmpleadoAdmin";
+}
+
+<div class="card card-body mt-3">
+    <h2>Lista Paciente</h2>
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th scope="col">Identificación</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Fecha Nacimiento</th>
+                <th scope="col">Estatura</th>
+                <th scope="col">Acciones</th>
+           
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model.Pacientes)
+        {
+                <tr>
+                    <td>@e.IdPaciente</td>
+                    <td>@e.PrimerNombre @e.SegundoNombre @e.PrimerApellido @e.SegundoApellido </td>
+                    <td>@e.Correo</td>
+                    <td>@e.Telefono</td>
+                    <td>@e.FechaNacimiento</td>                         
+                    <td>@e.Estatura</td>                         
+                    <td>
+                        <a class="btn btn-outline-primary" asp-page="./ActualizarPaciente" asp-route-id="@e.IdPaciente">Editar</a>
+                        <a class="btn btn-outline-danger"  asp-page="./EliminarPaciente" asp-route-id="@e.IdPaciente">Eliminar</a>
+                    </td>
+                
+                </tr>
+        }
+        </tbody>
+
+       
+    </table>
+</div>

@@ -1,0 +1,36 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.ListarCargoModel
+@{
+    Layout="_LayoutEmpleadoAdmin";
+}
+<a class="btn btn-primary mt-5" asp-page="/Empleado/Empleado">Crear Nuevo Empleado</a>
+<div class="card card-body mt-3">
+    <h2>Lista Cargos</h2>
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th scope="col">Id Cargo</th>
+                <th scope="col">Nombre Cargo</th>                
+                <th scope="col">Acciones</th>
+           
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model.CargoEmpleados)
+        {
+                <tr>
+                    <td>@e.IdCargoEmpleado</td>                   
+                    <td>@e.NombreCargo</td>                         
+                    <td>
+                        <a class="btn btn-outline-primary" asp-page="./ActualizarCargo" asp-route-id="@e.IdCargoEmpleado">Editar</a>
+                        <a class="btn btn-outline-danger"  asp-page="./EliminarCargo" asp-route-id="@e.IdCargoEmpleado">Eliminar</a>
+                    </td>
+                
+                </tr>
+        }
+        </tbody>
+
+       
+    </table>
+</div>

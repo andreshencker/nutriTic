@@ -40,7 +40,6 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\NutriTic.App.F
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\NutriTic.App.Frontend.genruntimeconfig.cache
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\NutriTic.App.Frontend.csproj.CopyComplete
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Login\Login.cshtml.g.cs
-I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Home\Index.cshtml.g.cs
 C:\Nutricion\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\NutriTic.App.Frontend.pdb
 C:\Nutricion\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\appsettings.Development.json
 C:\Nutricion\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\appsettings.json
@@ -347,3 +346,11 @@ E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\
 E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Colsultas\Consultas.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Colsultas\Consultas.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutEmpleadoAdmin.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Paciente\ActualizarPaciente.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Paciente\EliminarPaciente.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Paciente\ListarPacientes.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\CargoEmpleado\ListarCargo.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\ActualizarPacienteEmpleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\EliminarPacienteEmpleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\ListarPacienteEmpleado.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs

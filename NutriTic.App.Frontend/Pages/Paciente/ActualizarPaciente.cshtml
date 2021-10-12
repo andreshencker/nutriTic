@@ -1,0 +1,74 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.ActualizarPacienteModel
+@{
+    Layout = "_LayoutEmpleadoAdmin";
+}
+<h2>Actualizacion de datos Paciente</h2>
+<form method="post">
+    <div class="row mt-5">
+        <div class="form-group col">
+            <label asp-for="Paciente.IdPaciente"></label>
+            <input class="form-control" asp-for="Paciente.IdPaciente" readonly>
+            <span asp-validation-for="Paciente.IdPaciente" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.PrimerNombre"></label>
+            <input class="form-control" asp-for="Paciente.PrimerNombre" required>
+            <span asp-validation-for="Paciente.PrimerNombre" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.SegundoNombre"></label>
+            <input class="form-control" asp-for="Paciente.SegundoNombre">
+            <span asp-validation-for="Paciente.SegundoNombre" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.PrimerApellido"></label>
+            <input class="form-control" asp-for="Paciente.PrimerApellido" required>
+            <span asp-validation-for="Paciente.PrimerApellido" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.SegundoApellido"></label>
+            <input class="form-control" asp-for="Paciente.SegundoApellido" required>
+            <span asp-validation-for="Paciente.SegundoApellido" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.Correo"></label>
+            <input class="form-control" type="email" asp-for="Paciente.Correo" required>
+            <span asp-validation-for="Paciente.Correo"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.Telefono"></label>
+            <input class="form-control" type="tel" asp-for="Paciente.Telefono" required>
+            <span asp-validation-for="Paciente.Telefono"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.Estatura"></label>
+            <input class="form-control" type="text" asp-for="Paciente.Estatura" required>
+            <span asp-validation-for="Paciente.Estatura"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.FechaNacimiento"></label>
+            <input class="form-control" type="text" asp-for="Paciente.FechaNacimiento" required>
+            <span asp-validation-for="Paciente.FechaNacimiento"></span>
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <a class="btn btn-secondary" asp-page="./ListarPacientes">Volver</a>
+
+
+</form>

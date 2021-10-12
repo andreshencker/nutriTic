@@ -29,6 +29,19 @@ namespace NutriTic.App.Persistencia
             return cargoempleadoAdicionado.Entity;
         }
 
+        CargoEmpleado IRepositorioCargoEmpleado.UpdateCargoEmpleado(CargoEmpleado cargoEmpleado)
+        {
+            var cargoEmpleadoEncontrado=_appContext.CargoEmpleado.FirstOrDefault(p => p.IdCargoEmpleado==cargoEmpleado.IdCargoEmpleado);
+            if(cargoEmpleadoEncontrado!=null){
+                cargoEmpleadoEncontrado.NombreCargo=cargoEmpleado.NombreCargo;
+             
+                _appContext.SaveChanges();
+            }
+           
+            return cargoEmpleadoEncontrado;
+        }
+
+
         void IRepositorioCargoEmpleado.DeleteCargoEmpleado(int idCargoEmpleado)
         {
             var cargoempleadoEncontrado=_appContext.CargoEmpleado.FirstOrDefault(p => p.IdCargoEmpleado==idCargoEmpleado);

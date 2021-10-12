@@ -1,0 +1,60 @@
+﻿@page
+@model NutriTic.App.Frontend.Pages.EliminarPacienteModel
+@{
+    Layout="_LayoutEmpleadoAdmin";
+}
+<h1>Eliminar Paciente</h1>
+
+<form method="post">
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.IdPaciente"></label>
+            <input class="form-control" asp-for="Paciente.IdPaciente" readonly>            
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.PrimerNombre"></label>
+            <input class="form-control" asp-for="Paciente.PrimerNombre" readonly>          
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.SegundoNombre"></label>
+            <input class="form-control" asp-for="Paciente.SegundoNombre" readonly>
+           
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.PrimerApellido"></label>
+            <input class="form-control" asp-for="Paciente.PrimerApellido" readonly>            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.SegundoApellido"></label>
+            <input class="form-control" asp-for="Paciente.SegundoApellido" readonly>            
+        </div>
+        <div class="form-group col">
+            <label asp-for="Paciente.Correo"></label>
+            <input class="form-control" type="email" asp-for="Paciente.Correo" readonly>          
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="Paciente.Telefono"></label>
+            <input class="form-control" type="tel" asp-for="Paciente.Telefono" readonly>
+            
+        </div>
+        <div class="form-group col">
+            <Label asp-for="Paciente.IdPaciente"></Label>
+            <input class="form-control" type="text" asp-for="Paciente.IdPaciente" readonly>
+            
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="return confirm('¿Desea eliminar este registro?')">Eliminar</button>
+    <a class="btn btn-secondary" asp-page="./ListarPacientes">Volver</a>
+</form>
+Paciente
