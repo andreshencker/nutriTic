@@ -335,7 +335,6 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Me
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Medidas\ActualizarMedida.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\ValoracionE\ActualizarValoracion.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\ValoracionE\CrearValoracion.cshtml.g.cs
-I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\ValoracionE\EliminarValoracion.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Profile\ProfileEmpleado.cshtml.g.cs
 E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Medidas\ActualizarMedida.cshtml.g.cs
 E:\proyectos\prueba\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Medidas\CrearMedida.cshtml.g.cs
