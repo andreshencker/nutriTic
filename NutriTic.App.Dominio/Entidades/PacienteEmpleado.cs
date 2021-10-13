@@ -21,10 +21,7 @@ namespace NutriTic.App.Dominio
         [ForeignKey("IdEmpleado")]
         public Empleado Empleado  {get;set;}
 
-        public PacienteEmpleado(string IdPaciente, string IdEmpleado){
-            this.IdEmpleado=IdEmpleado;
-            this.IdPaciente=IdPaciente;
-        }
+      
 
      
     }

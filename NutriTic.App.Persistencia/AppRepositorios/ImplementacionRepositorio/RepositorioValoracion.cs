@@ -24,7 +24,7 @@ namespace NutriTic.App.Persistencia
               ValoracionEncontrado.comentario=valoracion.comentario;
               ValoracionEncontrado.IdEmpleado=valoracion.IdEmpleado;
               ValoracionEncontrado.Fecha=valoracion.Fecha;
-                _appContext.SaveChanges();
+              _appContext.SaveChanges();
 
             }
             return ValoracionEncontrado;
@@ -52,7 +52,28 @@ namespace NutriTic.App.Persistencia
                                        join m in _appContext.Medida on v.IdMedida equals m.IdMedida
                                        join ce in _appContext.CargoEmpleado on e.IdCargoEmpleado equals ce.IdCargoEmpleado
                                        join p in _appContext.Paciente on m.IdPaciente equals p.IdPaciente
-                                       where v.IdEmpleado==IdEmpleado && m.IdPaciente==IdPaciente
+                                       join pe in _appContext.PacienteEmpleado on v.IdEmpleado equals pe.IdEmpleado
+                                       where pe.IdEmpleado==IdEmpleado && pe.IdPaciente==IdPaciente
+                                       select new VValoracion(){
+                                           IdValoracion=v.IdValoracion,
+                                           IdMedida=v.IdMedida,
+                                           Comentario=v.comentario,
+                                           NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
+                                           NombreCargo=ce.NombreCargo,
+                                           FechaValoracion=v.Fecha
+
+                                       }).ToList();
+            return valoraciones;
+        }
+        IEnumerable<VValoracion> IRepositorioValoracion.GetAllValoracionesByPaciente(string IdPaciente)
+        {
+            IEnumerable<VValoracion> valoraciones= (from v in _appContext.Valoracion
+                                       join e in _appContext.Empleado on v.IdEmpleado equals e.IdEmpleado
+                                       join m in _appContext.Medida on v.IdMedida equals m.IdMedida
+                                       join ce in _appContext.CargoEmpleado on e.IdCargoEmpleado equals ce.IdCargoEmpleado
+                                       join p in _appContext.Paciente on m.IdPaciente equals p.IdPaciente
+                                       join pe in _appContext.PacienteEmpleado on v.IdEmpleado equals pe.IdEmpleado
+                                       where pe.IdPaciente==IdPaciente 
                                        select new VValoracion(){
                                            IdValoracion=v.IdValoracion,
                                            IdMedida=v.IdMedida,

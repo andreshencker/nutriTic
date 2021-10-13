@@ -15,18 +15,21 @@ namespace NutriTic.App.Frontend.Pages
         public Paciente Paciente{get;set;}      
 
         private readonly IRepositorioEmpleado repositorioEmpleado;
-         private readonly IRepositorioMedidas repositorioMedida; 
+        private readonly IRepositorioMedidas repositorioMedida; 
         private readonly IRepositorioPaciente repositorioPaciente;
+        private readonly IRepositorioPacienteEmpleado repositorioPacienteEmpleado;
         private readonly IRepositorioValoracion repositorioValoracion;
 
         public IEnumerable<VMedida> Medidas{get;set;}
-        public IEnumerable<VPaciente> Pacientes{get;set;}
+        public IEnumerable<VPacienteEmpleado> vPacienteEmpleados{get;set;}
         public IEnumerable<VValoracion> Valoraciones{get;set;}
         public ValoracionEModel(IRepositorioEmpleado repositorioEmpleado,
+                                IRepositorioPacienteEmpleado repositorioPacienteEmpleado,
                                 IRepositorioPaciente repositorioPaciente,
                                 IRepositorioMedidas repositorioMedida,
                                 IRepositorioValoracion repositorioValoracion){
             this.repositorioEmpleado=repositorioEmpleado;
+            this.repositorioPacienteEmpleado=repositorioPacienteEmpleado;
             this.repositorioPaciente=repositorioPaciente;
             this.repositorioMedida=repositorioMedida; 
             this.repositorioValoracion=repositorioValoracion;                          
@@ -35,10 +38,10 @@ namespace NutriTic.App.Frontend.Pages
         public void OnGet()
         {
 
-            Pacientes=repositorioPaciente.GetAllVPacientes();
+            vPacienteEmpleados=repositorioPacienteEmpleado.GetAllPacienteEmpleadosByEmpleado(Sesion.GetSesion().IdUsuario);
             Paciente=repositorioPaciente.GetOnePaciente("1037");
             Medidas=repositorioMedida.GetAllMedidasByPaciente("1037");
-            Valoraciones=repositorioValoracion.GetAllValoracionesByPacienteAndEmpleado("1037",Sesion.GetSesion().IdUsuario);
+            Valoraciones=repositorioValoracion.GetAllValoracionesByPaciente("1037");
         }
     }
 }

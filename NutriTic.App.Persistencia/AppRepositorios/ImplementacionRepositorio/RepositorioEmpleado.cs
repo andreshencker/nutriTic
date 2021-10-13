@@ -53,27 +53,28 @@ namespace NutriTic.App.Persistencia
         IEnumerable<VEmpleado> IRepositorioEmpleado.GetAllVEmpleados()
         {
 
-            IEnumerable<VEmpleado> vEmpleados = (from e in _appContext.Empleado 
-                     join ce in _appContext.CargoEmpleado
-                    on e.IdCargoEmpleado equals ce.IdCargoEmpleado
-                    select new VEmpleado() {
-                        IdEmpleado= e.IdEmpleado,
-                        PrimerNombre=e.PrimerNombre,
-                        SegundoNombre= e.SegundoNombre,
-                        PrimerApellido=e.PrimerApellido,
-                        SegundoApellido=e.SegundoApellido,
-                        Correo=e.Correo,
-                        Telefono=e.Telefono,
-                        NombreCargo=ce.NombreCargo,
-                        NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
-                        IdNombreCompleto=e.IdEmpleado+" "+e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido}).ToList();
+            IEnumerable<VEmpleado> vEmpleados = (
+                from e in _appContext.Empleado 
+                join ce in _appContext.CargoEmpleado
+                on e.IdCargoEmpleado equals ce.IdCargoEmpleado
+                select new VEmpleado() {
+                    IdEmpleado= e.IdEmpleado,
+                    PrimerNombre=e.PrimerNombre,
+                    SegundoNombre= e.SegundoNombre,
+                    PrimerApellido=e.PrimerApellido,
+                    SegundoApellido=e.SegundoApellido,
+                    Correo=e.Correo,
+                    Telefono=e.Telefono,
+                    NombreCargo=ce.NombreCargo,
+                    NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
+                    IdNombreCompleto=e.IdEmpleado+" "+e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido}).ToList();
             return vEmpleados;
              
         }
 
-         IEnumerable<VEmpleado> IRepositorioEmpleado.GetOneVEmpleado(string idEmpleado)
+        VEmpleado IRepositorioEmpleado.GetOneVEmpleado(string idEmpleado)
         {
-           IEnumerable<VEmpleado> vEmpleados = (from e in _appContext.Empleado 
+           VEmpleado vEmpleados = (from e in _appContext.Empleado 
                     join ce in _appContext.CargoEmpleado
                     on e.IdCargoEmpleado equals ce.IdCargoEmpleado
                     where e.IdEmpleado==idEmpleado
@@ -85,7 +86,7 @@ namespace NutriTic.App.Persistencia
                         SegundoApellido=e.SegundoApellido,
                         Correo=e.Correo,
                         Telefono=e.Telefono,
-                        NombreCargo=ce.NombreCargo}).ToList();
+                        NombreCargo=ce.NombreCargo}).FirstOrDefault();
             return vEmpleados;
         }
         Empleado IRepositorioEmpleado.GetOneEmpleado(string idEmpleado)
@@ -93,33 +94,35 @@ namespace NutriTic.App.Persistencia
             return _appContext.Empleado.FirstOrDefault(p => p.IdEmpleado == idEmpleado);
 
         }
-
-       
-
-
-
         
          IEnumerable<Empleado> IRepositorioEmpleado.GetEmpleadoByCargo(int idCargoEmpleado)
         {   
             return _appContext.Empleado.Where(p => p.IdCargoEmpleado == idCargoEmpleado);
 
         }
-        /*
-        IEnumerable<Empleado> IRepositorioEmpleado.EmpleadosAsignados()
-        {
-            Random random = new Random();
-            List<Empleado> empleadosAsignados = new List<Empleado>();
-            List<Empleado> nutricionistas= IRepositorioEmpleado.GetEmpleadoByCargo(1);
-            List<Empleado> coaches= IRepositorioEmpleado.GetEmpleadoByCargo(2);           
-            Empleado nutricionista = nutricionistas[random.Next(0,nutricionistas.Count())];
-            Empleado coach=coaches[random.Next(0,coaches.Count())];
-            empleadosAsignados.Add(nutricionista);
-            empleadosAsignados.Add(coach);
-            return empleadosAsignados;
-
+        IEnumerable<VEmpleado> IRepositorioEmpleado.GetVEmpleadoByCargo(int idCargoEmpleado)
+        {   
+            IEnumerable<VEmpleado> vEmpleados =(
+                from e in _appContext.Empleado
+                join ce in _appContext.CargoEmpleado on e.IdCargoEmpleado equals ce.IdCargoEmpleado
+                where e.IdCargoEmpleado==idCargoEmpleado
+                select new VEmpleado(){
+                    IdEmpleado= e.IdEmpleado,
+                    PrimerNombre=e.PrimerNombre,
+                    SegundoNombre= e.SegundoNombre,
+                    PrimerApellido=e.PrimerApellido,
+                    SegundoApellido=e.SegundoApellido,
+                    Correo=e.Correo,
+                    Telefono=e.Telefono,
+                    NombreCargo=ce.NombreCargo,
+                    NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
+                    IdNombreCompleto=e.IdEmpleado+" "+e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido        
+                }).ToList();
+            return vEmpleados;
         }
         
+        
 
-    */
+    
     }
 }

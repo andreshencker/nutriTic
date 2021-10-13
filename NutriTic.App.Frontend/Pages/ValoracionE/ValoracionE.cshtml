@@ -8,14 +8,18 @@
 <div class="content mt-5">
 
     <div class="card card-body mt-3">
-        <h2>Información del Paciente</h2>
+        <h2>Información del Paciente</h2>  
+
+
+
         <form action="">
             <div class="row mt-2">
                 <div class="form-group col">
                     <Label>Paciente</Label>
                     <Select class="form-control"
-                        asp-items="@(new  SelectList(Model.Pacientes,"IdPaciente","IdNombreCompleto"))">
+                        asp-items="@(new  SelectList(Model.vPacienteEmpleados,"IdPaciente","NombrePaciente"))">
                     </Select>
+                  
                 </div>
             </div>
 

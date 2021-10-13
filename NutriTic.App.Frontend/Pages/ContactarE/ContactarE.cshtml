@@ -1,28 +1,30 @@
 ﻿@page
 @model NutriTic.App.Frontend.Pages.ContactarEModel
-@{ Layout="_LayoutPaciente";
+@{
+    Layout = "_LayoutPaciente";
     <div class="content mt-5">
-        <div class="card card-body">
-            <h3>Empleado</h3> 
-            <Select  class="form-control">
-                <option value=""></option>
-            </Select>
-        </div>
+
         <div class="card card-body mt-3">
-            <form action="" method="get">               
-                <h3>Información del Empleado</h3>       
-                <div class="form-group">
-                    <label for="correo">Correo</label>
-                    <input class="form-control" name="Correo" type="email" placeholder="Correo" required disabled>
+            <form action="" method="get">
+                <h3 class="text-center">Información del Empleado</h3>
+                <div class="card card-body mt-5">
+                    <label>Empleado</label>
+                    <Select class="form-control"
+                        asp-items="@(new  SelectList(Model.vPacienteEmpleados,"IdEmpleado","NombreEmpleado"))" >                        
+                    </Select>
                 </div>
                 <div class="form-group">
-                    <label for="Telefono">Telefono</label>
-                    <input class="form-control" name="Telefono" type="tel" placeholder="Telefono" required disabled>
+                    <label asp-for="Empleado.Correo"></label>
+                    <input class="form-control" asp-for="Empleado.Correo" type="email" readonly>
                 </div>
-                   <div class="form-group">
-                     <label for="Cargo">Cargo</label>  
-                    <input class="form-control" name="Cargo" type="text" placeholder="Cargo" required disabled>
-                </div>                   
+                <div class="form-group">
+                    <label asp-for="Empleado.Telefono"></label>
+                    <input class="form-control" asp-for="Empleado.Telefono"   readonly>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Empleado.NombreCargo"></label>
+                    <input class="form-control" asp-for="Empleado.NombreCargo" type="text" readonly>
+                </div>
             </form>
         </div>
     </div>

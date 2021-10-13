@@ -57,6 +57,29 @@ namespace NutriTic.App.Persistencia
 
         }
 
+        /*
+        VPaciente IRepositorioPaciente.GetOnevPaciente(string idPaciente)
+        {
+            vPaciente=(
+                from e in _appContext.Paciente
+                where e.IdPaciente == idPaciente
+                select new VPaciente(){
+                    IdPaciente= e.IdPaciente,
+                    PrimerNombre=e.PrimerNombre,
+                    SegundoNombre= e.SegundoNombre,
+                    PrimerApellido=e.PrimerApellido,
+                    SegundoApellido=e.SegundoApellido,
+                    Correo=e.Correo,
+                    Telefono=e.Telefono,
+                    Estatuta=e.Estatura,
+                    NombreCompleto=e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido,
+                    IdNombreCompleto=e.IdPaciente+" "+ e.PrimerNombre+" "+e.SegundoNombre+" "+e.PrimerApellido+" "+e.SegundoApellido     
+                });
+
+                return vPaciente;
+
+        }*/
+
            Paciente IRepositorioPaciente.UpdatePaciente(Paciente paciente)
         {
             var PacienteEncontrado=_appContext.Paciente.FirstOrDefault(p => p.IdPaciente==paciente.IdPaciente);

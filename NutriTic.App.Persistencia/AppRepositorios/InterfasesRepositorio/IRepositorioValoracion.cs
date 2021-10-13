@@ -7,6 +7,7 @@ namespace NutriTic.App.Persistencia
     {
         IEnumerable<Valoracion> GetAllValoraciones();
         IEnumerable<VValoracion> GetAllValoracionesByPacienteAndEmpleado(string IdPaciente,string IdEmpleado);
+        IEnumerable<VValoracion> GetAllValoracionesByPaciente(string IdPaciente);
         
         Valoracion GetOneValoracion(int idValoracion );
         Valoracion CreateValoracion(Valoracion valoracion );

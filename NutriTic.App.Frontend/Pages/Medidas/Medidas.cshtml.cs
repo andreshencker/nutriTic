@@ -12,15 +12,19 @@ namespace NutriTic.App.Frontend.Pages
     public class MedidasModel : PageModel
     {
         private readonly IRepositorioMedidas repositorioMedida; 
-        public IEnumerable<Medida> Medidas{get;set;}       
+        private readonly IRepositorioValoracion repositorioValoracion; 
+        public IEnumerable<VMedida> Medidas{get;set;}       
+        public IEnumerable<VValoracion> Valoraciones{get;set;}       
 
-        public MedidasModel(IRepositorioMedidas repositorioMedida){
+        public MedidasModel(IRepositorioMedidas repositorioMedida,
+                            IRepositorioValoracion repositorioValoracion){
             this.repositorioMedida=repositorioMedida;
+            this.repositorioValoracion=repositorioValoracion;
         }
         public void OnGet()
         {
-            
-            Medidas=repositorioMedida.GetAllMedidas();
+            Valoraciones=repositorioValoracion.GetAllValoracionesByPaciente(Sesion.GetSesion().IdUsuario);
+            Medidas=repositorioMedida.GetAllMedidasByPaciente(Sesion.GetSesion().IdUsuario);
         }
 
         

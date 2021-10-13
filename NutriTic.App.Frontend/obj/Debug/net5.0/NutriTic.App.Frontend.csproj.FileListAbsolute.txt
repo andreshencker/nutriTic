@@ -351,6 +351,5 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Pa
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Paciente\ListarPacientes.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\CargoEmpleado\ListarCargo.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\ActualizarPacienteEmpleado.cshtml.g.cs
-I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\EliminarPacienteEmpleado.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\ListarPacienteEmpleado.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs

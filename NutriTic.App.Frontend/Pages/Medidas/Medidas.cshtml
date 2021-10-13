@@ -2,19 +2,20 @@
 @model NutriTic.App.Frontend.Pages.MedidasModel
 @{
     Layout = "_LayoutPaciente";
-    
-    <div class="content mt-5">      
-        <a class="btn btn-primary" asp-page="/Medidas/CrearMedida">Crear Medida</a>  
+
+    <div class="content mt-5">
+        <a class="btn btn-primary" asp-page="/Medidas/CrearMedida">Crear Medida</a>
         <div class="card card-body mt-3">
             <div class="card card-body mt-3">
                 <h3>Historial de medidas</h3>
-                <table  class="table ">
+                <table class="table ">
                     <thead>
                         <tr>
                             <th>Id Medida</th>
                             <th>Fecha Medida</th>
                             <th>Peso</th>
-                            <th>Comentario</th>
+                            <th>IMC</th>
+                            <th>Variación IMC</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -23,11 +24,14 @@
                         {
                             <tr>
                                 <td>@e.IdMedida</td>
-                                <td>@e.Fecha</td>
-                                <td>@e.Peso</td>                               
-                                <td></td>                                                  
+                                <td>@e.FechaMedida</td>
+                                <td>@e.Peso</td>
+                                <td>@e.Peso</td>
+                                <td>@e.Peso</td>
+
                                 <td>
-                                    <a class="btn btn-outline-primary" asp-page="./ActualizarMedida" asp-route-id="@e.IdMedida">Editar</a>                                   
+                                    <a class="btn btn-outline-primary" asp-page="./ActualizarMedida"
+                                    asp-route-id="@e.IdMedida">Editar</a>
                                 </td>
 
                             </tr>
@@ -39,13 +43,28 @@
             <div class="card card-body mt-3">
                 <h3>Historial de valoraciones</h3>
                 <table class="table">
-                    <tr>
-                        <th>Id Medida</th>
-                        <th>Fecha valoración</th>
-                        <th>valoración</th>
-                        <th>Empleado</th>
-                        <th>Cargo</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Id Medida</th>
+                            <th>Fecha valoración</th>
+                            <th>valoración</th>
+                            <th>Empleado</th>
+                            <th>Cargo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         @foreach (var e in Model.Valoraciones)
+                        {
+                            <tr>
+                                <td>@e.IdMedida</td>
+                                <td>@e.FechaValoracion</td>
+                                <td>@e.Comentario</td>
+                                <td>@e.NombreCompleto</td>
+                                <td>@e.NombreCargo</td>                         
+
+                            </tr>
+                        }
+                    </tbody>
 
                 </table>
             </div>

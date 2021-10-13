@@ -30,8 +30,8 @@ namespace NutriTic.App.Frontend.Pages
         }
 
         public IActionResult OnPost(Valoracion valoracion)
-        {
-            
+        {   
+            //valoracion.Comentario="esto es un cambio";
             valoracion.Fecha = DateTime.Now;
             valoracion.IdEmpleado=Sesion.GetSesion().IdUsuario;            
             repositorioValoracion.UpdateValoracion(valoracion);
