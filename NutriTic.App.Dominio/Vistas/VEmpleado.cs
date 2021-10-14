@@ -19,6 +19,7 @@ namespace NutriTic.App.Dominio
         public string NombreCargo { get; set; }
         
         public string NombreCompleto { get; set; }
+        
         public string IdNombreCompleto { get; set; }
 
         

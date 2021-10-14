@@ -5,13 +5,16 @@
 }
 <div class="card card-body mt-3">
     <h2 class="text-center">Empleados Asignados al Paciente</h2>
-    <div class="form-group col mt-4">
+    <form action="">
+         <div class="form-group col mt-4">
         <Label>Paciente</Label>
-        <Select class="form-control"
-            asp-items="@(new  SelectList(Model.Pacientes,"IdPaciente","NombreCompleto"))">
-        </Select>       
+        <Select class="form-control" asp-for="PacienteEmpleado.IdPaciente"  asp-items="@(new SelectList(Model.Pacientes,"IdPaciente","NombreCompleto",false))"></Select>           
+        </Select>        
+        <button type="submit">buscar</button>        
     </div>
-    <div class="form-group col mt-4">
+    </form>
+   
+    <div  class="form-group col mt-4">
         <table class="table table-bordered text-center">
 
         <thead>

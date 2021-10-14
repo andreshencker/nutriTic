@@ -18,7 +18,7 @@ namespace NutriTic.App.Persistencia
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if(!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("Data source=(localdb)\\MSSQLLocalDB;Initial Catalog=NutriTicData");
+                optionsBuilder.UseSqlServer("Server=tcp:nutritic.database.windows.net,1433;Initial Catalog=NutriticData;Persist Security Info=False;User ID=admin_01;Password=Nutritic123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
     }

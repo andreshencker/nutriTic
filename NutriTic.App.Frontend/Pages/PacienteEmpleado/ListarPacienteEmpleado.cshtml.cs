@@ -14,7 +14,9 @@ namespace NutriTic.App.Frontend.Pages
         private readonly IRepositorioPacienteEmpleado repositorioPacienteEmpleado;       
         public IEnumerable<VPacienteEmpleado> PacienteEmpleados{get;set;}      
         private readonly IRepositorioPaciente repositorioPaciente;       
-        public IEnumerable<VPaciente> Pacientes{get;set;}      
+        public IEnumerable<VPaciente> Pacientes{get;set;} 
+
+        public PacienteEmpleado PacienteEmpleado { get; set; }     
 
         public ListarPacienteEmpleadoModel(IRepositorioPacienteEmpleado repositorioPacienteEmpleado,
                                            IRepositorioPaciente repositorioPaciente){
@@ -22,11 +24,15 @@ namespace NutriTic.App.Frontend.Pages
             this.repositorioPaciente=repositorioPaciente;       
         }
 
-        public void OnGet(string idPaciente)
+       
+        public void OnGet(string ident)
         {   
+            
             Pacientes=repositorioPaciente.GetAllVPacientes();
-            PacienteEmpleados=repositorioPacienteEmpleado.GetAllPacienteEmpleadosByPaciente("1037"); 
-
+            PacienteEmpleados=repositorioPacienteEmpleado.GetAllPacienteEmpleadosByPaciente("1037");  
         }
+
+       
+       
     }
 }
