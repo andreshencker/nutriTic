@@ -10,6 +10,8 @@ namespace NutriTic.App.Persistencia
         IEnumerable<VValoracion> GetAllValoracionesByPaciente(string IdPaciente);
         
         Valoracion GetOneValoracion(int idValoracion );
+        Valoracion GetOneValoracionByMedida(int IdMedida );
+        Valoracion GetOneValoracionByMedidaAndEmpledo(int IdMedida,string IdEmpleado );
         Valoracion CreateValoracion(Valoracion valoracion );
         Valoracion UpdateValoracion(Valoracion valoracion);
         void DeleteValoracion(int idValoracion);

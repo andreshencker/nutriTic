@@ -31,11 +31,16 @@ namespace NutriTic.App.Frontend.Pages
 
         public IActionResult OnPost(Valoracion valoracion)
         {   
-            //valoracion.Comentario="esto es un cambio";
-            valoracion.Fecha = DateTime.Now;
-            valoracion.IdEmpleado=Sesion.GetSesion().IdUsuario;            
-            repositorioValoracion.UpdateValoracion(valoracion);
-            return RedirectToPage("./ValoracionE");
+            Valoracion=repositorioValoracion.GetOneValoracion(valoracion.IdValoracion);
+            if(Valoracion.IdEmpleado==Sesion.GetSesion().IdUsuario){
+                valoracion.Fecha = DateTime.Now;
+                valoracion.IdEmpleado=Sesion.GetSesion().IdUsuario;            
+                repositorioValoracion.UpdateValoracion(valoracion);
+                return RedirectToPage("./ValoracionE");
+            }else{
+                return NotFound("No Puede Modificar este Regsitro");
+            }
+            
         }
     }
 }

@@ -25,11 +25,18 @@ namespace NutriTic.App.Frontend.Pages
         }
 
        
-        public void OnGet(string ident)
+        public IActionResult OnGet(string ident)
         {   
             
             Pacientes=repositorioPaciente.GetAllVPacientes();
             PacienteEmpleados=repositorioPacienteEmpleado.GetAllPacienteEmpleadosByPaciente("1037");  
+            return Page();
+        }
+
+         public IActionResult OnPost()
+        {
+           
+            return RedirectToPage("./ListarPacienteEmpleado");
         }
 
        

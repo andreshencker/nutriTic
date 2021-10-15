@@ -8,9 +8,9 @@
     <form action="">
          <div class="form-group col mt-4">
         <Label>Paciente</Label>
-        <Select class="form-control" asp-for="PacienteEmpleado.IdPaciente"  asp-items="@(new SelectList(Model.Pacientes,"IdPaciente","NombreCompleto",false))"></Select>           
+        <Select class="form-control" asp-for="PacienteEmpleado.IdPaciente"  asp-items="@(new SelectList(Model.Pacientes,"IdPaciente","NombreCompleto"))"></Select>           
         </Select>        
-        <button type="submit">buscar</button>        
+        <button type="submit" asp-route-Id="Pacientes.IdPaciente">buscar</button>        
     </div>
     </form>
    

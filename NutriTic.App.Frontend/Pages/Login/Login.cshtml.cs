@@ -47,7 +47,7 @@ namespace NutriTic.App.Frontend.Pages
                 Empleado = repositorioEmpleado.GetOneEmpleado(usuario.IdUsuario);
                 if (Empleado == null)
                 {
-                    return NotFound();
+                    return NotFound("Usuario no existe, Comuniquese con el área encargada");
                 }
                 else
                 {
@@ -67,7 +67,7 @@ namespace NutriTic.App.Frontend.Pages
                 Paciente = repositorioPaciente.GetOnePaciente(usuario.IdUsuario);
                 if (Paciente == null)
                 {
-                    return NotFound();
+                    return NotFound("Usuario no existe, porfavor cree una cuenta");
                 }
                 else
                 {

@@ -19,7 +19,8 @@ namespace NutriTic.App.Persistencia
            IEnumerable<VMedida> vMedidas= ( from m in _appContext.Medida
                                             join p in _appContext.Paciente 
                                             on m.IdPaciente equals p.IdPaciente
-                                            where m.IdPaciente==idPaciente    
+                                            where m.IdPaciente==idPaciente
+                                            orderby m.IdMedida descending    
                                             select new VMedida(){
                                              IdMedida = m.IdMedida,
                                              Peso = m.Peso,

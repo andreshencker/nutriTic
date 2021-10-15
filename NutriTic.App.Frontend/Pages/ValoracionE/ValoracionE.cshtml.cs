@@ -35,13 +35,20 @@ namespace NutriTic.App.Frontend.Pages
             this.repositorioValoracion=repositorioValoracion;                          
         }       
 
-        public void OnGet()
+        public void OnGet(string IdPaciente)
         {
-
+            
             vPacienteEmpleados=repositorioPacienteEmpleado.GetAllPacienteEmpleadosByEmpleado(Sesion.GetSesion().IdUsuario);
             Paciente=repositorioPaciente.GetOnePaciente("1037");
             Medidas=repositorioMedida.GetAllMedidasByPaciente("1037");
             Valoraciones=repositorioValoracion.GetAllValoracionesByPaciente("1037");
         }
+
+        
+        public IActionResult OnPost()
+        {
+            return RedirectToPage("./ValoracionE");
+        }
     }
+    
 }

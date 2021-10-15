@@ -62,7 +62,7 @@ namespace NutriTic.App.Frontend.Pages
             }
             else
             {
-                return RedirectToPage("/Registro/registro");
+                return NotFound("El usuario ya existe");
             }
         }
     }

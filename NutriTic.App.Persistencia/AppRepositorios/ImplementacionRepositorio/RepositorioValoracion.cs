@@ -74,6 +74,7 @@ namespace NutriTic.App.Persistencia
                                        join p in _appContext.Paciente on m.IdPaciente equals p.IdPaciente
                                        join pe in _appContext.PacienteEmpleado on v.IdEmpleado equals pe.IdEmpleado
                                        where pe.IdPaciente==IdPaciente 
+                                       orderby v.IdMedida descending
                                        select new VValoracion(){
                                            IdValoracion=v.IdValoracion,
                                            IdMedida=v.IdMedida,
@@ -90,6 +91,16 @@ namespace NutriTic.App.Persistencia
         {
             return _appContext.Valoracion.FirstOrDefault(p => p.IdValoracion == idValoracion);
 
+        }
+        Valoracion IRepositorioValoracion.GetOneValoracionByMedida(int IdMedida)
+        {
+           Valoracion Valoracion= _appContext.Valoracion.Where(p => p.IdMedida == IdMedida).FirstOrDefault();
+           return Valoracion;
+        }
+        Valoracion IRepositorioValoracion.GetOneValoracionByMedidaAndEmpledo(int IdMedida, string IdEmpleado)
+        {
+           Valoracion Valoracion= _appContext.Valoracion.Where(p => p.IdMedida == IdMedida && p.IdEmpleado==IdEmpleado).FirstOrDefault();
+           return Valoracion;
         }
 
     }

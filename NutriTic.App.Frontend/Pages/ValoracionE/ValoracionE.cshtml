@@ -12,13 +12,14 @@
 
 
 
-        <form action="">
+        <form action="Post">
             <div class="row mt-2">
                 <div class="form-group col">
                     <Label>Paciente</Label>
-                    <Select class="form-control"
-                        asp-items="@(new  SelectList(Model.vPacienteEmpleados,"IdPaciente","NombrePaciente"))">
+                    <Select class="form-control" asp-for="Paciente.IdPaciente"
+                        asp-items="@(new  SelectList(Model.vPacienteEmpleados,"IdPaciente","NombrePaciente"))">                        
                     </Select>
+                    <button type="submit" asp-route-Id="">Busqueda</button>
                   
                 </div>
             </div>

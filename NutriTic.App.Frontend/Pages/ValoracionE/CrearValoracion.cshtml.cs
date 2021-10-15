@@ -16,21 +16,34 @@ namespace NutriTic.App.Frontend.Pages
 
         public Valoracion Valoracion { get; set; }
 
+        public Medida Media { get; set; }
+
         public CrearValoracionModel(IRepositorioValoracion repositorioValoracion){
             this.repositorioValoracion=repositorioValoracion;
         }
-        public void OnGet()
+        public IActionResult OnGet(int id)
         {
+            
             Valoracion=new Valoracion();
+            Valoracion.IdMedida=id;
+            return Page();
+            
         }
 
-        public IActionResult OnPost(int id,Valoracion valoracion)
-        {
-            valoracion.IdMedida=id;
-            valoracion.Fecha = DateTime.Now;
-            valoracion.IdEmpleado=Sesion.GetSesion().IdUsuario;
-            repositorioValoracion.CreateValoracion(valoracion);
-            return RedirectToPage("./ValoracionE");
+        public IActionResult OnPost(Valoracion valoracion)
+        {   
+
+            Valoracion=repositorioValoracion.GetOneValoracionByMedidaAndEmpledo(valoracion.IdMedida,Sesion.GetSesion().IdUsuario);
+            if(Valoracion==null){
+                valoracion.Fecha = DateTime.Now;
+                valoracion.IdEmpleado=Sesion.GetSesion().IdUsuario;
+                repositorioValoracion.CreateValoracion(valoracion);
+                return RedirectToPage("./ValoracionE");
+            }else{
+                return NotFound("la valoracion ya existe");
+            }
+            
+           
         }
     }
 }
