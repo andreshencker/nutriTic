@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/98290cd9-b5ae-46ba-b4c3-179ae7efec86/resourceGroups/MisionTic2020/providers/Microsoft.Web/sites/Nutritic",
+    "appService.deploySubpath": "NutriTic.App.Frontend\\publish"
+}

@@ -1,0 +1,10 @@
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\bin\Release\netstandard2.0\NutriTic.App.Dominio.deps.json
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\bin\Release\netstandard2.0\NutriTic.App.Dominio.dll
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\bin\Release\netstandard2.0\NutriTic.App.Dominio.pdb
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.csproj.AssemblyReference.cache
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.AssemblyInfoInputs.cache
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.AssemblyInfo.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.csproj.CoreCompileInputs.cache
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.dll
+I:\proyectos\reto\nutriTic\NutriTic.App.Dominio\obj\Release\netstandard2.0\NutriTic.App.Dominio.pdb

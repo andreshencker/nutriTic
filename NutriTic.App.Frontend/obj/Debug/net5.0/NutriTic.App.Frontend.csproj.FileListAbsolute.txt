@@ -352,3 +352,8 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Ca
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\ActualizarPacienteEmpleado.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\PacienteEmpleado\ListarPacienteEmpleado.cshtml.g.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\publish\web.config
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\publish\appsettings.Development.json
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\publish\appsettings.json
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\publish\NutriTic.App.Frontend.deps.json
+I:\proyectos\reto\nutriTic\NutriTic.App.Frontend\bin\Debug\net5.0\publish\NutriTic.App.Frontend.runtimeconfig.json

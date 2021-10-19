@@ -1,0 +1,13 @@
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\bin\Release\netstandard2.1\NutriTic.App.Persistencia.deps.json
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\bin\Release\netstandard2.1\NutriTic.App.Persistencia.dll
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\bin\Release\netstandard2.1\NutriTic.App.Persistencia.pdb
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\bin\Release\netstandard2.1\NutriTic.App.Dominio.dll
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\bin\Release\netstandard2.1\NutriTic.App.Dominio.pdb
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.csproj.AssemblyReference.cache
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfoInputs.cache
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfo.cs
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.csproj.CoreCompileInputs.cache
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.csproj.CopyComplete
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.dll
+I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Release\netstandard2.1\NutriTic.App.Persistencia.pdb

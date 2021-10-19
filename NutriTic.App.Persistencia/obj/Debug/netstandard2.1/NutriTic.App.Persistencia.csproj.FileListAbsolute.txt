@@ -45,7 +45,6 @@ I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\Nu
 I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfoInputs.cache
 I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.AssemblyInfo.cs
 I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CoreCompileInputs.cache
-I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.csproj.CopyComplete
 I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.dll
 I:\proyectos\reto\nutriTic\NutriTic.App.Persistencia\obj\Debug\netstandard2.1\NutriTic.App.Persistencia.pdb
 C:\Nutricion\NutriTic\NutriTic.App.Persistencia\bin\Debug\netstandard2.1\NutriTic.App.Persistencia.deps.json
